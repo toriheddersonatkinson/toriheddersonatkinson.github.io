@@ -24,7 +24,7 @@
 <h1>Non Semantic vs Semantic Tags in HTML</h1>
 <p>In HTML, the difference between semantic and non-semantic tags is in the meaning they convey to browsers and
 	developers. Semantic tags clearly describe their purpose and the type of content they hold. For instance,
-<header>, <article>, <nav>, and <footer> show the role of their content. This clarity makes the structure more
+	<header>, <article>, <nav>, and <footer> show the role of their content. This clarity makes the structure more
 	meaningful. It also improves accessibility, search engine optimization (SEO), and readability for
 	developers. Assistive technologies like screen readers benefit from semantic tags because they provide
 	context about the layout of the page.
@@ -33,8 +33,8 @@
 	additional attributes like classes or IDs to explain their purpose. Overall, semantic tags
 	enhance clarity and usability, while non-semantic tags offer structural flexibility without
 	inherent meaning.</p>
-<h2></h2>
-						<p></p>
+<h2>Benefits of Using Semantic Tag</h2>
+	<p></p>
 
 						<body>
 
