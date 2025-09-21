@@ -1,25 +1,50 @@
-body {
-    font-family: "Times New Roman", Times, serif;
-    background-color: white;
-    color: black;
-    margin: 0;
-    padding: 0;
+body, #secondLayout {
+  font-family: Times, 'Times New Roman', serif;
+  color: #000;
+  background: #fff;
+  margin: 0;
+  padding: 0;
 }
 
-.container {
+.container, section {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 10px; /* Adjusts the space between columns */
     padding: 20px;
 }
 
-p {
-    grid-column: span 6; /* Default to full width for paragraphs */
-    margin: 0 0 20px; /* Space between paragraphs */
+h1, h2 {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin: 0 0 1.5rem 0;
 }
 
-.italic {
-    font-style: italic; /* Italics for callouts */
+p {
+  grid-column: 2 / span 4;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.callout {
+  grid-column: 1 / -1;
+  font-size: 1.4rem;
+  font-style: italic;
+  text-align: center;
+  margin: 2rem 0;
+  line-height: 1.4;
+  font-weight: bold;
+  letter-spacing: 0.01em;
 }
 
 /* Additional styles for specific layouts can be added here */
+
+@media (max-width: 900px) {
+  section {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+  }
+  p, .callout {
+    grid-column: 1 / -1;
+  }
+}
