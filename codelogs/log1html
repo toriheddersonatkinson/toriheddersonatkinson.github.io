@@ -1,45 +1,40 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-
 <head>
-
-	<!-- meta tags and title -->
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>HTML Semantic Tags</title>
-
-	<!-- external and internal CSS -->
-	<link rel="stylesheet" href="styles.css" media="all">
-	<style>
-		/* in-file CSS here */
-	</style>
-
-	<!-- external and internal JavaScript -->
-	<script src="scripts.js" defer></script>
-	<script>
-		// in-page JavaScript here
-	</script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Semantic Tags</title>
+    <link rel="stylesheet" href="styles.css" media="all">
+    <style>
+        /* in-file CSS here */
+    </style>
+    <script src="scripts.js" defer></script>
+    <script>
+        // in-page JavaScript here
+    </script>
 </head>
-<h1>Non Semantic vs Semantic Tags in HTML</h1>
-<p>In HTML, the difference between semantic and non-semantic tags is in the meaning they convey to browsers and
-	developers. Semantic tags clearly describe their purpose and the type of content they hold. For instance,
-	<header>, <article>, <nav>, and <footer> show the role of their content. This clarity makes the structure more
-	meaningful. It also improves accessibility, search engine optimization (SEO), and readability for
-	developers. Assistive technologies like screen readers benefit from semantic tags because they provide
-	context about the layout of the page.
-	In contrast, non-semantic tags such as <div> and <span> do not describe their content. They are merely
-	containers for grouping elements or applying styles with CSS. While they are flexible, they need
-	additional attributes like classes or IDs to explain their purpose. Overall, semantic tags
-	enhance clarity and usability, while non-semantic tags offer structural flexibility without
-	inherent meaning.</p>
-<h2>Benefits of Using Semantic Tag</h2>
-	<p></p>
-
-						<body>
-
-							<!-- HTML elements here -->
-
-						</body>
-
-</html>
+<body>
+    <header>
+        <h1>Non-Semantic vs Semantic Tags in HTML</h1>
+    </header>
+    <main>
+        <section>
+            <h2>What is the difference?</h2>
+            <p>
+                In HTML, <strong>semantic tags</strong> clearly describe their meaning and the type of content they contain, such as <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;footer&gt;</code>. These tags help browsers, developers, and assistive technologies understand the structure and purpose of the content.<br>
+                <strong>Non-semantic tags</strong> like <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> do not convey any meaning about their content—they are used mainly for layout or styling purposes.
+            </p>
+        </section>
+        <section>
+            <h2>Benefits of Using Semantic Tags</h2>
+            <ul>
+                <li><strong>Improved Accessibility:</strong> Semantic tags provide context to assistive technologies, making web pages easier to navigate for users with disabilities.</li>
+                <li><strong>Better SEO:</strong> Search engines can better understand and index your content, improving your site's visibility in search results.</li>
+                <li><strong>Enhanced Readability:</strong> Semantic tags make the code easier to read and maintain for developers.</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025</p>
+    </footer>
+</body>
