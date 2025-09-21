@@ -1,0 +1,25 @@
+body {
+    font-family: "Times New Roman", Times, serif;
+    background-color: white;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px; /* Adjusts the space between columns */
+    padding: 20px;
+}
+
+p {
+    grid-column: span 6; /* Default to full width for paragraphs */
+    margin: 0 0 20px; /* Space between paragraphs */
+}
+
+.italic {
+    font-style: italic; /* Italics for callouts */
+}
+
+/* Additional styles for specific layouts can be added here */
