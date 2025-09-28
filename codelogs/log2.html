@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Measuring Units</title>
+    <style>
+        textarea { display: block; width: 100%; margin: 1em 0; }
+    </style>
+</head>
+<body>
+    <h1>CSS Measuring Units</h1>
+    <h2>Absolute vs. Relative Units</h2>
+    <p>
+        In CSS, length units are used to size elements, set margins, padding, and more. These units fall into two main categories: <strong>absolute</strong> and <strong>relative</strong>.
+        <br>
+        <strong>Absolute units</strong> have a fixed size regardless of context. Examples include <code>px</code> (pixels), <code>cm</code> (centimeters), and <code>in</code> (inches). They are useful when you need precise control, but may not adapt well to different screens or devices.
+        <br>
+        <strong>Relative units</strong> depend on other measurements, such as the size of the parent element, the viewport, or the font size. Examples include <code>em</code>, <code>rem</code>, <code>%</code>, <code>vw</code>, and <code>vh</code>. These units help create responsive designs that adjust to different devices and user settings.
+    </p>
+
+    <h2>Selected CSS Units Explained</h2>
+    <h3>1. px, pt</h3>
+    <ul>
+        <li><strong>px</strong> (pixels): Represents a single dot on the screen. It is an absolute unit in CSS, but its actual size can vary depending on the device's pixel density. Commonly used for precise layouts.</li>
+        <li><strong>pt</strong> (points): Traditionally used in print, where 1pt = 1/72 of an inch. In web design, it's less common, but sometimes used for font sizes.</li>
+    </ul>
+    <textarea readonly>
+p {
+    font-size: 16px;
+}
+h1 {
+    font-size: 24pt;
+}
+    </textarea>
+
+    <h3>2. em, rem</h3>
+    <ul>
+        <li><strong>em</strong>: Relative to the font-size of the element. For example, if the parent font-size is 16px, 2em equals 32px. Useful for scalable layouts.</li>
+        <li><strong>rem</strong>: Relative to the font-size of the root (<code>&lt;html&gt;</code>) element. This makes it easier to maintain consistent sizing across a site.</li>
+    </ul>
+    <textarea readonly>
+html {
+    font-size: 16px;
+}
+p {
+    font-size: 2em;   /* 32px if parent is 16px */
+}
+h2 {
+    font-size: 2rem;  /* 32px if root is 16px */
+}
+    </textarea>
+
+    <h3>3. vw, vh</h3>
+    <ul>
+        <li><strong>vw</strong> (viewport width): 1vw is 1% of the width of the browser window. Useful for responsive layouts.</li>
+        <li><strong>vh</strong> (viewport height): 1vh is 1% of the height of the browser window.</li>
+    </ul>
+    <textarea readonly>
+div {
+    width: 50vw;  /* Half the viewport width */
+    height: 30vh; /* 30% of the viewport height */
+}
+    </textarea>
+
+    <h2>Summary Table</h2>
+    <table border="1" cellpadding="6">
+        <tr>
+            <th>Unit</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>px</td>
+            <td>Absolute</td>
+            <td>Pixels; device-dependent dot</td>
+        </tr>
+        <tr>
+            <td>em</td>
+            <td>Relative</td>
+            <td>Relative to parent font-size</td>
+        </tr>
+        <tr>
+            <td>vw</td>
+            <td>Relative</td>
+            <td>Relative to viewport width</td>
+        </tr>
+    </table>
+</body>
+</html>
