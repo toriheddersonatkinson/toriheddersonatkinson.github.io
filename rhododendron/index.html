@@ -7,6 +7,17 @@
     <title>TP4: Pacific Rhododendron</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        body {
+            background-color: #fff1f4;
+            color: #5a1a2d;
+            font-family: Arial, sans-serif;
+        }
+
+        h1,
+        h2 {
+            color: #d72660;
+        }
+
         .photo-gallery {
             display: flex;
             flex-wrap: wrap;
@@ -19,8 +30,9 @@
             max-width: 100%;
             height: auto;
             border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 2px 8px rgba(215, 38, 96, 0.15);
             width: 320px;
+            border: 3px solid #fbb1bd;
         }
 
         @media (max-width: 600px) {
@@ -33,6 +45,23 @@
                 width: 90vw;
                 max-width: 100%;
             }
+        }
+
+        section {
+            margin-bottom: 2em;
+        }
+
+        footer {
+            margin-top: 2em;
+            color: #d72660;
+        }
+
+        a {
+            color: #d72660;
+        }
+
+        a:hover {
+            color: #a0133a;
         }
     </style>
 </head>
@@ -63,7 +92,7 @@
         <h2>Images</h2>
         <div class="photo-gallery">
             <img src="amit-merchant-MXcjSLMOIwU-unsplash.jpg" alt="Pacific Rhododendron in winter">
-            <img src="tina-sara-d_yyDFV-g-s-unsplash.jpg" alt="Rhododendron in woods">
+            <!-- Add more images as needed -->
         </div>
     </section>
 
