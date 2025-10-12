@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Color</title>
+    <style>
+        textarea { display: block; width: 100%; margin: 1em 0; }
+    </style>
+</head>
+<body>
+    <h1>CSS Color</h1>
+    <h2>How CSS Uses Color</h2>
+    <p>
+        CSS allows you to control the color of text, backgrounds, borders, and many other elements on a web page. Color is a fundamental part of web design, helping to create visual interest, highlight important content, and improve readability.
+    </p>
+
+    <h2>Key CSS Color Properties</h2>
+    <ul>
+        <li>
+            <strong>color</strong>: Sets the color of the text inside an element.
+            <br>
+            <code>p { color: blue; }</code>
+        </li>
+        <li>
+            <strong>background-color</strong>: Sets the background color of an element.
+            <br>
+            <code>div { background-color: #f0f0f0; }</code>
+        </li>
+        <li>
+            <strong>border-color</strong>: Sets the color of the border around an element.
+            <br>
+            <code>span { border: 1px solid red; border-color: red; }</code>
+        </li>
+    </ul>
+
+    <h2>Ways to Specify Color in CSS</h2>
+    <p>CSS accepts color values in several formats. Here are some of the most common:</p>
+
+    <h3>1. Named Colors</h3>
+    <p>CSS supports over 140 named colors, such as <code>red</code>, <code>blue</code>, <code>goldenrod</code>, and <code>mediumseagreen</code>.</p>
+    <textarea readonly>
+h1 {
+    color: mediumseagreen;
+}
+    </textarea>
+
+    <h3>2. Hexadecimal Colors</h3>
+    <p>Hex codes start with <code>#</code> and are followed by 3 or 6 hexadecimal digits. For example, <code>#FF5733</code> is a shade of orange.</p>
+    <textarea readonly>
+body {
+    background-color: #FF5733;
+}
+    </textarea>
+
+    <h3>3. RGB Colors</h3>
+    <p>RGB stands for Red, Green, Blue. You can specify values from 0 to 255 for each color channel.</p>
+    <textarea readonly>
+p {
+    color: rgb(34, 139, 34); /* forest green */
+}
+    </textarea>
+
+    <h3>4. HSL Colors</h3>
+    <p>HSL stands for Hue, Saturation, and Lightness. This format is often easier to adjust for designers.</p>
+    <textarea readonly>
+div {
+    background-color: hsl(210, 50%, 60%);
+}
+    </textarea>
+
+    <h2>Summary Table</h2>
+    <table border="1" cellpadding="6">
+        <tr>
+            <th>Format</th>
+            <th>Example</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>Named</td>
+            <td>blue</td>
+            <td>Predefined color names</td>
+        </tr>
+        <tr>
+            <td>Hexadecimal</td>
+            <td>#00FF00</td>
+            <td>Hex code for green</td>
+        </tr>
+        <tr>
+            <td>RGB</td>
+            <td>rgb(255,0,0)</td>
+            <td>Red using RGB values</td>
+        </tr>
+        <tr>
+            <td>HSL</td>
+            <td>hsl(120, 100%, 50%)</td>
+            <td>Green using HSL values</td>
+        </tr>
+    </table>
