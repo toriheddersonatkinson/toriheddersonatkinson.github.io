@@ -1,107 +1,160 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Recipe</title>
+    <link rel="stylesheet" href="styles.css" media="all">
+    <style>
+        body {
+            background-color: #e6fbe8;
+            /* light Irish green */
+            color: #145a32;
+            /* deep green text */
+            font-family: Arial, sans-serif;
+        }
 
-	<!-- meta tags and title -->
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Shepherd Pie</title>
+        h1,
+        h2 {
+            color: #178a3d;
+            /* Irish green */
+        }
 
-	<!-- external and internal CSS -->
-	<link rel="stylesheet" href="styles.css" media="all">
-	<style>
-		/* in-file CSS here */
-	</style>
+        .callout,
+        .highlight {
+            background: #b2f7c1;
+            /* pale green */
+            border-left: 5px solid #178a3d;
+            margin: 1.5em 0;
+            padding: 1em 1.5em;
+            color: #145a32;
+            border-radius: 6px;
+        }
 
+        a {
+            color: #178a3d;
+        }
+
+        a:hover {
+            color: #0b3d1c;
+        }
+
+        section {
+            margin-bottom: 2em;
+        }
+
+        ul code,
+        li code {
+            background: #d2f8df;
+            color: #178a3d;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+
+        table {
+            background: #fff;
+            border-collapse: collapse;
+        }
+
+        th {
+            background: #b2f7c1;
+            color: #145a32;
+        }
+
+        td,
+        th {
+            border: 1px solid #b2f7c1;
+            padding: 0.5em 1em;
+        }
+    </style>
 </head>
 
 <body>
+    <header>
+        <h1>Shepherds Pie</h1>
+        <img src="The-Best-Classic-Shepherds-Pie-550-500x500.jpg" alt="">
+        <p>Delicious Shepherd Pie, a traditional Irish recipe with ground lamb, vegetables, and covered in mashed
+            potatoes. It is my favorite food because it is a comfort food for me and reminds me of my time in Ireland.
+        </p>
+    </header>
 
-	<header>
-		<h1>Shepherds Pie</h1>
-		<img src="The-Best-Classic-Shepherds-Pie-550-500x500.jpg" alt="">
-		<p>Delicious Shepherd Pie, a traditional Irish recipe with ground lamb, vegetables, and covered in mashed
-			potatoes. It is my favorite food because it is a comfort food for me and reminds me of my time in Ireland.
-		</p>
-	</header>
+    <main>
+        <section>
+            <h2>Ingredients</h2>
+            <ul>
+                <li>Shepherd Pie Ingredients
+                    <ul>
+                        <li>1 tablespoon vegetable oil</li>
+                        <li>1 cup (128 grams) yellow/brown onion, chopped</li>
+                        <li>2 large, carrots diced small</li>
+                        <li>1 ½ pounds ground lamb</li>
+                        <li>1 teaspoon salt (or to taste)</li>
+                        <li>¼ teaspoon ground black pepper</li>
+                        <li>2 garlic cloves, grated</li>
+                        <li>1 teaspoon dried thyme</li>
+                        <li>2 tablespoons all-purpose/plain flour</li>
+                        <li>3 teaspoons of tomato paste (puree in the UK)</li>
+                        <li> 1 cup (160 grams) frozen peas (no need to defrost)</li>
+                        <li>2 teaspoons Worcestershire sauce</li>
+                        <li>½ cup (118 ml) Guinness (optional)</li>
+                        <li>1 cup (236 ml) low sodium beef stock or broth</li>
+                    </ul>
+                </li>
 
-	<main>
-		<section>
-			<h2>Ingredients</h2>
-			<ul>
-				<li>Shepherd Pie Ingredients
-					<ul>
-						<li>1 tablespoon vegetable oil</li>
-						<li>1 cup (128 grams) yellow/brown onion, chopped</li>
-						<li>2 large, carrots diced small</li>
-						<li>1 ½ pounds ground lamb</li>
-						<li>1 teaspoon salt (or to taste)</li>
-						<li>¼ teaspoon ground black pepper</li>
-						<li>2 garlic cloves, grated</li>
-						<li>1 teaspoon dried thyme</li>
-						<li>2 tablespoons all-purpose/plain flour</li>
-						<li>3 teaspoons of tomato paste (puree in the UK)</li>
-						<li> 1 cup (160 grams) frozen peas (no need to defrost)</li>
-						<li>2 teaspoons Worcestershire sauce</li>
-						<li>½ cup (118 ml) Guinness (optional)</li>
-						<li>1 cup (236 ml) low sodium beef stock or broth</li>
-					</ul>
-				</li>
+                <li>Potatoe Topping List</li>
+                <ul>
+                    <li>2 pounds potatoes, peeled and cut into large chunks</li>
+                    <li>4 tablespoons unsalted butter, melted</li>
+                    <li>¼ cup milk, warm</li>
+                    <li>½ teaspoon salt or to taste</li>
+                    <li>¼ teaspoon ground black pepper</li>
 
-				<li>Potatoe Topping List</li>
-				<ul>
-					<li>2 pounds potatoes, peeled and cut into large chunks</li>
-					<li>4 tablespoons unsalted butter, melted</li>
-					<li>¼ cup milk, warm</li>
-					<li>½ teaspoon salt or to taste</li>
-					<li>¼ teaspoon ground black pepper</li>
+                </ul>
+                </li>
+        </section>
+        <section>
 
-				</ul>
-				</li>
-		</section>
-		<section>
+            <h2>Instructions:</h2>
+            <ul>
+                <li>This recipe is made in a cast iron skillet or ovenproof pan. You can also cook in a frying pan and
+                    transfer to a 9 x 13-inch (23 x 33 cm) rectangle baking dish.</li>
+                <h3> For Potatoes:</h3>
+                <ol>
+                    <li>To a large pan add the potatoes, add cold water until the potatoes are covered and bring to a
+                        boil. Turn down to a low boil and cook for 20 minutes until tender.
+                    <li>Add in butter, milk, and seasoning</li>
+                    <li>Once tender, mash with potatoe masher or mix in standing mixer</li>
+                </ol>
 
-			<h2>Instructions:</h2>
-			<ul>
-				<li>This recipe is made in a cast iron skillet or ovenproof pan. You can also cook in a frying pan and
-					transfer to a 9 x 13-inch (23 x 33 cm) rectangle baking dish.</li>
-				<h3> For Potatoes:</h3>
-				<ol>
-					<li>To a large pan add the potatoes, add cold water until the potatoes are covered and bring to a
-						boil. Turn down to a low boil and cook for 20 minutes until tender.
-					<li>Add in butter, milk, and seasoning</li>
-					<li>Once tender, mash with potatoe masher or mix in standing mixer</li>
-				</ol>
+                <h4> For Filling:</h4>
+                <ol>
+                    <li>Preheat oven to 400°F/200°C.</li>
+                    <li>Add vegetable oil to a 10-inch cast iron skillet over medium heat and add the carrots and onion,
+                        cook, stirring often until the onions start to soften.</li>
+                    <li>Add the meat, salt and pepper and cook (breaking up the meat) until it starts to brown. Add the
+                        garlic and thyme, cook for 3 minutes. Sprinkle the flour over the meat, and mix well. Cook for a
+                        minute or so to cook out the raw flavor.
+                    </li>
+                    <li>Add the peas, tomato paste, Worcestershire sauce and Guinness (if using), mix well into the
+                        meat. Add the beef stock/broth and bring to a simmer. Cook for 5 minutes until the liquid has
+                        thickened. Taste for seasoning and add more salt and pepper if needed. Turn off the heat. If not
+                        baking in the pan, transfer to your baking dish.</li>
+                    <li>Spread the potato mixture (or pipe with a piping bag for a decorative look) over the beef
+                        mixture. Make sure you make little peaks so they get a nice brown color and crisp up in the
+                        oven.</li>
+                    <li>Place the pan onto a baking sheet and bake in the oven for 15 minutes or until the top is golden
+                        brown.</li>
+                    <li>Remove from the oven and allow to sit for 10 minutes before serving.</li>
 
-				<h4> For Filling:</h4>
-				<ol>
-					<li>Preheat oven to 400°F/200°C.</li>
-					<li>Add vegetable oil to a 10-inch cast iron skillet over medium heat and add the carrots and onion,
-						cook, stirring often until the onions start to soften.</li>
-					<li>Add the meat, salt and pepper and cook (breaking up the meat) until it starts to brown. Add the
-						garlic and thyme, cook for 3 minutes. Sprinkle the flour over the meat, and mix well. Cook for a
-						minute or so to cook out the raw flavor.
-					</li>
-					<li>Add the peas, tomato paste, Worcestershire sauce and Guinness (if using), mix well into the
-						meat. Add the beef stock/broth and bring to a simmer. Cook for 5 minutes until the liquid has
-						thickened. Taste for seasoning and add more salt and pepper if needed. Turn off the heat. If not
-						baking in the pan, transfer to your baking dish.</li>
-					<li>Spread the potato mixture (or pipe with a piping bag for a decorative look) over the beef
-						mixture. Make sure you make little peaks so they get a nice brown color and crisp up in the
-						oven.</li>
-					<li>Place the pan onto a baking sheet and bake in the oven for 15 minutes or until the top is golden
-						brown.</li>
-					<li>Remove from the oven and allow to sit for 10 minutes before serving.</li>
+                </ol>
+        </section>
+    </main>
+    <footer>
 
-				</ol>
-		</section>
-	</main>
-	<footer>
+        <p>©2025 Tori Hedderson-Atkinson</p>
 
-		<p>©Tori Hedderson-Atkinson</p>
-
-	</footer>
+    </footer>
 
 
 
