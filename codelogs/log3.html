@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Media Queries</title>
+    <style>
+        body {
+            background-color: #f3e8ff; /* light purple */
+            color: #222;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #7c3aed; /* purple */
+        }
+        h2 {
+            color: #6d28d9; /* darker purple */
+        }
+        textarea { 
+            display: block; 
+            width: 100%; 
+            margin: 1em 0; 
+            background: #ede9fe; 
+            color: #222; 
+            border: 1px solid #c4b5fd; 
+            border-radius: 4px;
+        }
+        table {
+            background: #fff;
+            border-collapse: collapse;
+        }
+        th {
+            background: #c4b5fd;
+            color: #222;
+        }
+        td, th {
+            border: 1px solid #c4b5fd;
+            padding: 0.5em 1em;
+        }
+        ul code, li code {
+            background: #ede9fe;
+            color: #6d28d9;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Media Queries</h1>
+    <h2>How Does a CSS Media Query Work, and Why Is It Useful?</h2>
+    <p>
+        A CSS media query is a rule that applies CSS styles only if certain conditions about the user's device or screen are true. Media queries allow web pages to adapt their layout and appearance for different devices, such as phones, tablets, and desktops. This is the foundation of responsive web design, making websites more usable and visually appealing on all screen sizes.
+    </p>
+    <p>
+        Media queries use the <code>@media</code> rule, followed by one or more conditions (called "media features"). If the conditions are met, the enclosed CSS is applied. For example, you can change font sizes, hide or show elements, or adjust layouts based on the screen width.
+    </p>
+    <textarea readonly>
+@media (max-width: 600px) {
+    body {
+        font-size: 1.2em;
+    }
+}
+    </textarea>
+
+    <h2>Common Media Features in Media Queries</h2>
+    <p>
+        Media features are the conditions you can test for in a media query. Here are four commonly used media features:
+    </p>
+    <ul>
+        <li>
+            <strong>max-width</strong>: Checks if the viewport width is less than or equal to a certain value. Useful for applying styles to smaller screens.
+            <br>
+            <code>@media (max-width: 800px) { ... }</code>
+        </li>
+        <li>
+            <strong>orientation</strong>: Checks if the device is in "portrait" (vertical) or "landscape" (horizontal) mode.
+            <br>
+            <code>@media (orientation: landscape) { ... }</code>
+        </li>
+        <li>
+            <strong>prefers-color-scheme</strong>: Detects if the user prefers a light or dark color theme.
+            <br>
+            <code>@media (prefers-color-scheme: dark) { ... }</code>
+        </li>
+        <li>
+            <strong>resolution</strong>: Checks the pixel density of the screen, useful for targeting high-DPI (Retina) displays.
+            <br>
+            <code>@media (min-resolution: 2dppx) { ... }</code>
+        </li>
+    </ul>
+
+    <h2>Summary Table of Media Features</h2>
+    <table>
+        <tr>
+            <th>Media Feature</th>
+            <th>Example</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>max-width</td>
+            <td>@media (max-width: 600px)</td>
+            <td>Applies styles when viewport is 600px wide or less</td>
+        </tr>
+        <tr>
+            <td>orientation</td>
+            <td>@media (orientation: portrait)</td>
+            <td>Applies styles in portrait mode</td>
+        </tr>
+        <tr>
+            <td>prefers-color-scheme</td>
+            <td>@media (prefers-color-scheme: dark)</td>
+            <td>Applies styles if user prefers dark mode</td>
+        </tr>
+        <tr>
+            <td>resolution</td>
+            <td>@media (min-resolution: 2dppx)</td>
+            <td>Targets high-resolution (Retina) screens</td>
+        </tr>
