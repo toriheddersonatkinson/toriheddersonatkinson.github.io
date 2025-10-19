@@ -1,229 +1,72 @@
-:root{
-  --bg: #e6fbe8;     /* light Irish green background */
-  --panel: #ffffff;
-  --accent: #178a3d; /* Irish green */
-  --text: #145a32;
-  --muted: #6b8f76;
-  --radius: 10px;
-  --max: 1100px;
-  --gap: 1.25rem;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Responsive Recipe — Shepherd's Pie</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="hero">
+      <img src="../favorite-recipe/The-Best-Classic-Shepherds-Pie-550-500x500.jpg" alt="Shepherd's Pie" class="hero-img">
+      <div class="hero-text">
+        <h1>Shepherd's Pie</h1>
+        <p class="summary">Comforting Irish shepherd's pie with seasoned lamb, vegetables and a golden mashed potato topping.</p>
+        <ul class="meta">
+          <li><strong>Serves:</strong> 4</li>
+          <li><strong>Prep:</strong> 25 min</li>
+          <li><strong>Cook:</strong> 45 min</li>
+        </ul>
+      </div>
+    </div>
+  </header>
 
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.45;
-}
+  <main class="container">
+    <article class="instructions">
+      <h2>Instructions</h2>
+      <ol>
+        <li>Preheat oven to 400°F (200°C).</li>
+        <li><strong>Potatoes:</strong> Boil potatoes until tender (≈20 min). Mash with butter, milk, salt and pepper.</li>
+        <li><strong>Filling:</strong> Sauté onion & carrots in oil until soft. Add ground lamb, brown. Stir in garlic, thyme and flour, then add tomato paste, Worcestershire, stock and peas. Simmer until thickened.</li>
+        <li>Transfer filling to an ovenproof dish, spread mashed potatoes on top and create peaks for browning.</li>
+        <li>Bake 15–20 minutes until top is golden. Rest 10 minutes and serve.</li>
+      </ol>
+    </article>
 
-/* Mobile-first layout */
-.site-header{
-  padding:1.25rem;
-  text-align:center;
-}
-.hero{
-  display:grid;
-  grid-template-columns: 120px 1fr;
-  gap:0.75rem;
-  align-items:center;
-  justify-items:center;
-}
-.hero-img{
-  width:100%;
-  max-width:120px;
-  border-radius:8px;
-  box-shadow:0 6px 18px rgba(20,90,50,0.08);
-  border:3px solid rgba(23,138,61,0.08);
-}
-.hero-text h1{
-  margin:.15rem 0;
-  font-size:1.25rem;
-  color:var(--accent);
-}
-.summary{
-  margin:0.25rem 0;
-  color:var(--muted);
-  font-size:0.95rem;
-}
-.meta{
-  list-style:none;
-  padding:0;
-  margin:0.5rem 0 0 0;
-  display:flex;
-  gap:0.75rem;
-  justify-content:center;
-  font-size:0.9rem;
-}
-.meta li{background:var(--panel);padding:0.25rem 0.5rem;border-radius:6px;border:1px solid rgba(20,90,50,0.06)}
+    <aside class="ingredients">
+      <h2>Ingredients</h2>
+      <h3>Filling</h3>
+      <ul>
+        <li>1 tbsp vegetable oil</li>
+        <li>1 cup onion, chopped</li>
+        <li>2 carrots, diced</li>
+        <li>1½ lb ground lamb</li>
+        <li>2 garlic cloves, grated</li>
+        <li>1 tsp dried thyme</li>
+        <li>2 tbsp flour</li>
+        <li>3 tsp tomato paste</li>
+        <li>1 cup frozen peas</li>
+        <li>2 tsp Worcestershire sauce</li>
+        <li>1 cup beef stock</li>
+      </ul>
 
-/* Main container: stacked on mobile */
-.container{
-  max-width:var(--max);
-  margin:1rem auto;
-  padding:1rem;
-  display:grid;
-  grid-template-columns:1fr;
-  gap:var(--gap);
-}
+      <h3>Potato Topping</h3>
+      <ul>
+        <li>2 lb potatoes, peeled & chopped</li>
+        <li>4 tbsp unsalted butter</li>
+        <li>¼ cup milk</li>
+        <li>Salt & pepper to taste</li>
+      </ul>
 
-/* article and aside styles */
-.instructions, .ingredients{
-  background:var(--panel);
-  padding:1rem;
-  border-radius:var(--radius);
-  box-shadow: 0 6px 18px rgba(20,90,50,0.04);
-  border:1px solid rgba(20,90,50,0.04);
-}
-.instructions h2, .ingredients h2{color:var(--accent);margin-top:0}
-.instructions ol{padding-left:1.15rem}
-.ingredients ul{padding-left:1.15rem}
-.note{
-  margin-top:0.75rem;
-  padding:0.6rem;
-  background:#d2f8df;
-  border-left:4px solid var(--accent);
-  border-radius:6px;
-  color:var(--text);
-  font-size:0.95rem;
-}
+      <div class="note">
+        Tip: pipe the potato for a crisp, decorative top.
+      </div>
+    </aside>
+  </main>
 
-/* Footer */
-.site-footer{
-  text-align:center;
-  padding:1.25rem;
-  color:var(--accent);
-}
-
-/* Desktop / larger screens */
-@media (min-width:900px){
-  .hero{grid-template-columns: 200px 1fr; gap:1.25rem; justify-items:start}
-  .hero-img{max-width:200px}
-  .meta{justify-content:flex-start}
-  .container{
-    grid-template-columns: 2fr 1fr; /* instructions + ingredients sidebar */
-    align-items:start;
-    gap:2rem;
-    padding:2rem;
-  }
-  .site-header{padding:2rem}
-  .hero-text h1{font-size:1.6rem}
-  .summary{font-size:1rem}
-}
-```// filepath: /responsive-recipe/styles.css
-:root{
-  --bg: #e6fbe8;     /* light Irish green background */
-  --panel: #ffffff;
-  --accent: #178a3d; /* Irish green */
-  --text: #145a32;
-  --muted: #6b8f76;
-  --radius: 10px;
-  --max: 1100px;
-  --gap: 1.25rem;
-}
-
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.45;
-}
-
-/* Mobile-first layout */
-.site-header{
-  padding:1.25rem;
-  text-align:center;
-}
-.hero{
-  display:grid;
-  grid-template-columns: 120px 1fr;
-  gap:0.75rem;
-  align-items:center;
-  justify-items:center;
-}
-.hero-img{
-  width:100%;
-  max-width:120px;
-  border-radius:8px;
-  box-shadow:0 6px 18px rgba(20,90,50,0.08);
-  border:3px solid rgba(23,138,61,0.08);
-}
-.hero-text h1{
-  margin:.15rem 0;
-  font-size:1.25rem;
-  color:var(--accent);
-}
-.summary{
-  margin:0.25rem 0;
-  color:var(--muted);
-  font-size:0.95rem;
-}
-.meta{
-  list-style:none;
-  padding:0;
-  margin:0.5rem 0 0 0;
-  display:flex;
-  gap:0.75rem;
-  justify-content:center;
-  font-size:0.9rem;
-}
-.meta li{background:var(--panel);padding:0.25rem 0.5rem;border-radius:6px;border:1px solid rgba(20,90,50,0.06)}
-
-/* Main container: stacked on mobile */
-.container{
-  max-width:var(--max);
-  margin:1rem auto;
-  padding:1rem;
-  display:grid;
-  grid-template-columns:1fr;
-  gap:var(--gap);
-}
-
-/* article and aside styles */
-.instructions, .ingredients{
-  background:var(--panel);
-  padding:1rem;
-  border-radius:var(--radius);
-  box-shadow: 0 6px 18px rgba(20,90,50,0.04);
-  border:1px solid rgba(20,90,50,0.04);
-}
-.instructions h2, .ingredients h2{color:var(--accent);margin-top:0}
-.instructions ol{padding-left:1.15rem}
-.ingredients ul{padding-left:1.15rem}
-.note{
-  margin-top:0.75rem;
-  padding:0.6rem;
-  background:#d2f8df;
-  border-left:4px solid var(--accent);
-  border-radius:6px;
-  color:var(--text);
-  font-size:0.95rem;
-}
-
-/* Footer */
-.site-footer{
-  text-align:center;
-  padding:1.25rem;
-  color:var(--accent);
-}
-
-/* Desktop / larger screens */
-@media (min-width:900px){
-  .hero{grid-template-columns: 200px 1fr; gap:1.25rem; justify-items:start}
-  .hero-img{max-width:200px}
-  .meta{justify-content:flex-start}
-  .container{
-    grid-template-columns: 2fr 1fr; /* instructions + ingredients sidebar */
-    align-items:start;
-    gap:2rem;
-    padding:2rem;
-  }
-  .site-header{padding:2rem}
-  .hero-text h1{font-size:1.6rem}
-  .summary{font-size:1rem}
-}
+  <footer class="site-footer">
+    <p>© 2025 Tori Hedderson-Atkinson</p>
+  </footer>
+</body>
+</html>
