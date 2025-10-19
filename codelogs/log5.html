@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Images</title>
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;line-height:1.5;color:#222;background:#fff;padding:1.25rem;max-width:900px;margin:auto}
+    h1{color:#6a2e6e}
+    h2{color:#4b2150}
+    textarea{display:block;width:100%;margin:0.75rem 0;padding:0.6rem;font-family:monospace;background:#f6f3fb;border:1px solid #e1d9e9}
+    .examples{display:flex;gap:1rem;flex-wrap:wrap}
+    .preview{flex:1 1 240px;background:#fafafa;padding:0.5rem;border:1px solid #eee;border-radius:6px}
+    .preview img{max-width:100%;height:auto;display:block;border-radius:4px}
+    .bg-sample{height:160px;background:#ddd url("../images/example.jpg") center/cover no-repeat;border-radius:4px}
+    table{border-collapse:collapse;margin-top:0.5rem}
+    td,th{border:1px solid #eee;padding:0.4rem 0.6rem}
+    .muted{color:#555;font-size:0.95rem}
+  </style>
+</head>
+<body>
+  <h1>Images</h1>
+
+  <h2>Using images in HTML vs. CSS backgrounds</h2>
+  <p class="muted">
+    Images can be inserted directly into the document flow using the HTML <code>&lt;img&gt;</code> element or applied as decorative or layout backgrounds using CSS <code>background-image</code>. Each approach has different code patterns and use cases.
+  </p>
+
+  <h3>Differences (code and behavior)</h3>
+  <ul>
+    <li><strong>&lt;img&gt;</strong> is semantic content: browsers, search engines and assistive tech see it as part of the page. It supports alt text, srcset/sizes for responsive images, and intrinsic dimensions.</li>
+    <li><strong>background-image</strong> is presentation only: it belongs to the element's box and is not announced by screen readers. Best for decorative images or layout effects (e.g., hero backgrounds, patterned tiles).</li>
+    <li>Layout: <code>&lt;img&gt;</code> participates in flow and affects document size; background images do not change element dimensions (except as styled) and can be clipped or repeated.</li>
+  </ul>
+
+  <h3>Examples</h3>
+  <div class="examples">
+    <div class="preview">
+      <strong>HTML image with srcset (responsive)</strong>
+      <textarea readonly>
+<img src="shepherd-400.jpg"
+     srcset="shepherd-400.jpg 400w, shepherd-800.jpg 800w, shepherd-1200.jpg 1200w"
+     sizes="(max-width: 600px) 100vw, 600px"
+     alt="Shepherd's pie on a plate">
+      </textarea>
+      <img src="shepherd-400.jpg" alt="Shepherd's pie on a plate">
+    </div>
+
+    <div class="preview">
+      <strong>CSS background on a block (decorative)</strong>
+      <textarea readonly>
+.hero {
+  background-image: url('hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 320px;
+}
+      </textarea>
+      <div class="bg-sample" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <h2>Other CSS properties that affect background images</h2>
+  <ul>
+    <li><code>background-size</code> — controls scaling (e.g., <code>cover</code>, <code>contain</code>, or explicit sizes like <code>50% 100%</code>).</li>
+    <li><code>background-position</code> — controls the image's alignment inside the box (e.g., <code>center</code>, <code>top right</code>, or numeric offsets).</li>
+    <li><code>background-repeat</code> — controls tiling (<code>repeat</code>, <code>no-repeat</code>, <code>repeat-x</code>, <code>space</code>).</li>
+    <li><code>background-attachment</code> — can fix a background with respect to the viewport (<code>fixed</code>) or scroll with the content (<code>scroll</code>).</li>
+  </ul>
+
+  <h2>Image sizing and fitting</h2>
+  <p class="muted">For replaced elements like <code>&lt;img&gt;</code> the <code>object-fit</code> property controls how the image fills its content box (similar to <code>background-size</code> for CSS backgrounds).</p>
+  <textarea readonly>
+img.cover {
+  width:100%;
+  height:200px;
+  object-fit:cover; /* fill while preserving aspect ratio, cropping if needed */
+}
+  </textarea>
+
+  <h2>Dimensions vs. resolution (one sentence)</h2>
+  <p>
+    Dimensions are the pixel width and height of a bitmap (e.g., 1200×800 px); resolution describes pixel density (pixels per inch or device pixels per CSS pixel), which affects sharpness on different screens.
+  </p>
+
+  <h2>Extra credit — image formats: similarities, differences, and uses</h2>
+  <table>
+    <tr><th>Format</th><th>Notes & best uses</th></tr>
+    <tr>
+      <td>GIF</td>
+      <td>Indexed 256-color palette, supports simple animation and lossless compression for small graphics; good for low-color icons and simple animations but poor for photos.</td>
+    </tr>
+    <tr>
+      <td>PNG</td>
+      <td>Lossless, supports full transparency (alpha), good for screenshots, icons, and images needing crisp edges; larger file sizes for photos compared with lossy formats.</td>
+    </tr>
+    <tr>
+      <td>JPG / JPEG</td>
+      <td>Lossy compression optimized for photos; much smaller files for complex imagery but not ideal for sharp text or transparency; quality vs. size trade-off via compression level.</td>
+    </tr>
+    <tr>
+      <td>WebP</td>
+      <td>Modern format supporting both lossy and lossless compression plus alpha and animation; often smaller than JPEG/PNG — good for web delivery when supported.</td>
+    </tr>
+    <tr>
+      <td>SVG</td>
+      <td>Vector format (XML); infinitely scalable without quality loss, small for icons/illustrations, scriptable and styleable with CSS; not suitable for complex photographs.</td>
+    </tr>
+  </table>
+
+  <p class="muted">Summary: choose SVG for scalable graphics and icons, JPEG/WebP for photos, PNG for transparency and lossless needs, GIF for simple animations or tiny palettes; prefer WebP where browser support and tooling allow for best compression.</p>
+</body>
+</html>
