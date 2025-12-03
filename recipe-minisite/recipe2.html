@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lemon Salmon</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation (same block) -->
+  <nav class="nav" role="navigation" aria-label="Main">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">Recipe MiniSite</a>
+      <button id="nav-toggle" aria-expanded="false" aria-controls="nav-menu">Menu ▾</button>
+      <ul id="nav-menu" class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li class="has-sub">
+          <button class="sub-toggle" aria-expanded="false">My Recipes ▾</button>
+          <ul class="sub">
+            <li><a href="recipe1.html">Shepherd's Pie</a></li>
+            <li><a href="recipe2.html">Lemon Salmon</a></li>
+            <li><a href="recipe3.html">White Bean Chicken Chili</a></li>
+          </ul>
+        </li>
+        <li class="has-sub">
+          <button class="sub-toggle" aria-expanded="false">Favorite Recipe Sites ▾</button>
+          <ul class="sub">
+            <li><a href="https://www.allrecipes.com" target="_blank" rel="noopener">AllRecipes</a></li>
+            <li><a href="https://www.seriouseats.com" target="_blank" rel="noopener">Serious Eats</a></li>
+            <li><a href="https://www.bonappetit.com" target="_blank" rel="noopener">Bon Appétit</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <article class="recipe">
+      <h1>Lemon Salmon</h1>
+      <p class="meta">~20 min • Dinner • Seafood</p>
+
+      <h2>Ingredients</h2>
+      <ul>
+        <li>4 salmon fillets</li>
+        <li>2 tbsp olive oil</li>
+        <li>1 lemon (zest + juice)</li>
+        <li>2 garlic cloves, minced</li>
+        <li>salt & pepper</li>
+      </ul>
+
+      <h2>Steps</h2>
+      <ol>
+        <li>Preheat oven to 425°F (220°C) or heat a skillet.</li>
+        <li>Mix oil, lemon, garlic, salt and pepper; brush on salmon.</li>
+        <li>Bake 10–12 minutes or sear 3–4 minutes per side. Garnish and serve.</li>
+      </ol>
+
+      <p><a class="btn" href="index.html">Back to home</a></p>
+    </article>
+  </main>
+
+  <script src="scripts.js" defer></script>
+</body>
+</html>
