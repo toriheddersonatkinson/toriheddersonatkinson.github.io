@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TP4: Pacific Rhododendron</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Pacific Rhododendron — Dark Mode Demo</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
@@ -63,42 +63,103 @@
         a:hover {
             color: #a0133a;
         }
+
+        .site-header {
+            background-color: #f0fff4;
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        .tagline {
+            font-size: 1.2em;
+            margin: 0.5em 0;
+        }
+
+        .controls {
+            margin-top: 1em;
+        }
+
+        .btn {
+            background-color: #d72660;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            padding: 0.5em 1em;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #a0133a;
+        }
+
+        .back {
+            color: #d72660;
+            text-decoration: none;
+        }
+
+        .back:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1em;
+        }
+
+        .hero {
+            margin-bottom: 2em;
+            text-align: center;
+        }
+
+        .flower-illustration {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .callout {
+            background-color: #ffefef;
+            border-left: 4px solid #d72660;
+            margin: 1em 0;
+            padding: 0.5em 1em;
+            width: 100%;
+        }
+
+        .site-foot {
+            text-align: center;
+            padding: 1em 0;
+            background-color: #f0fff4;
+        }
     </style>
 </head>
 
 <body>
-    <header>
-        <h1>Pacific Rhododendron</h1>
-        <h2>Alternate Names</h2>
-        <p>Also known as Rhododendron macrophyllum, this plant is commonly referred to as the Coast Rhododendron.</p>
+    <header class="site-header">
+        <div class="inner">
+            <h1>Pacific Rhododendron</h1>
+            <p class="tagline">A quick reference page about the Pacific rhododendron — with a working dark mode.</p>
+            <div class="controls">
+                <button id="dark-toggle" class="btn">Dark Mode</button>
+                <a class="back" href="../index.html">← Back to site</a>
+            </div>
+        </div>
     </header>
 
-    <section>
-        <h2>Physical Size</h2>
-        <p>The Pacific Rhododendron can grow up to 15 feet tall and 10 feet wide, with large, leathery leaves that can reach up to 12 inches in length.</p>
-    </section>
-
-    <section>
-        <h2>Geography</h2>
-        <p>This species is native to the Pacific Northwest region of North America, thriving in coastal forests and mountainous areas.</p>
-    </section>
-
-    <section>
-        <h2>Climate</h2>
-        <p>The Pacific Rhododendron prefers a mild, moist climate with well-drained soil and partial shade.</p>
-    </section>
-
-    <section>
-        <h2>Images</h2>
-        <div class="photo-gallery">
-            <img src="amit-merchant-MXcjSLMOIwU-unsplash.jpg" alt="Pacific Rhododendron in winter">
-            <img src="tina-sara-d_yyDFV-g-s-unsplash.jpg" alt="Rhododendron in woods">
-        </div>
-    </section>
-
-    <footer>
-        <p>© 2025 Tori's Rhododendron Project</p>
-    </footer>
-</body>
-
-</html>
+    <main class="container">
+        <section class="hero">
+            <!-- decorative svg to avoid external images -->
+            <svg class="flower-illustration" viewBox="0 0 800 300" aria-hidden="true">
+                <defs>
+                    <linearGradient id="g" x1="0" x2="1">
+                        <stop offset="0" stop-color="#ffefef" />
+                        <stop offset="1" stop-color="#f0fff4" />
+                    </linearGradient>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#g)" />
