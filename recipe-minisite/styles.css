@@ -1,0 +1,46 @@
+/* Basic layout (mobile-first) */
+:root{--accent:#ef6c35;--bg:#fff;--muted:#666}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;background:#fff;color:#111}
+.container{max-width:980px;margin:0 auto;padding:18px}
+.hero{padding:20px 0}
+.lead{color:var(--muted);margin-top:6px}
+.grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:12px}
+.card{border-radius:10px;overflow:hidden;border:1px solid #eee;display:flex;flex-direction:column}
+.card img{width:100%;height:160px;object-fit:cover;display:block}
+.card-body{padding:12px}
+.meta{color:var(--muted);font-size:0.95rem;margin-bottom:8px}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:8px 12px;border-radius:8px;text-decoration:none}
+
+/* Recipe page */
+.recipe{padding:10px 0}
+.recipe h1{margin-top:0}
+
+/* Navigation styles (copied/implemented for this project) */
+.nav{background:#fff;border-bottom:1px solid #eee}
+.nav-inner{max-width:980px;margin:0 auto;padding:10px 18px;display:flex;align-items:center;gap:12px}
+.brand{font-weight:700;color:var(--accent);text-decoration:none}
+#nav-toggle{margin-left:auto;background:#fff;border:1px solid #eee;padding:6px 10px;border-radius:8px;display:inline-block}
+.nav-menu{list-style:none;padding:0;margin:0;display:none}
+.nav-menu > li{margin-top:10px}
+.nav-menu a{display:block;padding:8px 0;color:#111;text-decoration:none}
+.has-sub .sub{display:none;padding-left:12px;list-style:none;margin:8px 0}
+.sub-toggle{background:none;border:0;padding:8px 0;font-weight:600}
+
+/* Large screens */
+@media(min-width:700px){
+  #nav-toggle{display:none}
+  .nav-inner{align-items:center}
+  .nav-menu{display:flex;gap:18px;margin-left:auto}
+  .nav-menu > li{margin:0}
+  .has-sub{position:relative}
+  .has-sub .sub{position:absolute;left:0;top:100%;background:#fff;border:1px solid #eee;padding:8px;border-radius:8px;display:none;min-width:200px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+  .has-sub:hover .sub{display:block}
+  .sub a{padding:6px 12px}
+}
+
+/* Responsive grid for larger screens */
+@media(min-width:760px){
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .card img{height:140px}
+}
