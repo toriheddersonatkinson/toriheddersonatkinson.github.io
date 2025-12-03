@@ -77,5 +77,242 @@
             box-shadow: 0 2px 10px rgba(255, 121, 168, 0.2);
         }
 
-        body.darkMode
+        body.darkMode footer {
+            color: #ff79a8;
+        }
 
+        /* Dark Mode Button */
+        #darkModeButton {
+            padding: 0.5em 1em;
+            margin-bottom: 1em;
+            background-color: #d72660;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        #darkModeButton:hover {
+            background-color: #a0133a;
+        }
+
+        body.darkMode #darkModeButton {
+            background-color: #ff79a8;
+            color: #1a1a1a;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Dark Mode Toggle Button -->
+    <button id="darkModeButton">Dark Mode</button>
+
+    <header>
+        <h1>Pacific Rhododendron</h1>
+        <h2>Alternate Names</h2>
+        <p>Also known as Rhododendron macrophyllum, this plant is commonly referred to as the Coast Rhododendron.</p>
+    </header>
+
+    <section>
+        <h2>Physical Size</h2>
+        <p>The Pacific Rhododendron can grow up to 15 feet tall and 10 feet wide, with large, leathery leaves that can reach up to 12 inches in length.</p>
+    </section>
+
+    <section>
+        <h2>Geography</h2>
+        <p>This species is native to the Pacific Northwest region of North America, thriving in coastal forests and mountainous areas.</p>
+    </section>
+
+    <section>
+        <h2>Climate</h2>
+        <p>The Pacific Rhododendron prefers a mild, moist climate with well-drained soil and partial shade.</p>
+    </section>
+
+    <section>
+        <h2>Images</h2>
+        <div class="photo-gallery">
+            <img src=<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP4: Pacific Rhododendron</title>
+
+    <style>
+        /* Light Mode */
+        body {
+            background-color: #fff1f4;
+            color: #5a1a2d;
+            font-family: Arial, sans-serif;
+            padding: 1em;
+        }
+
+        h1, h2 {
+            color: #d72660;
+        }
+
+        .photo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+            justify-content: center;
+            margin-bottom: 2em;
+        }
+
+        .photo-gallery img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            width: 320px;
+            box-shadow: 0 2px 8px rgba(215, 38, 96, 0.15);
+            border: 3px solid #fbb1bd;
+        }
+
+        @media (max-width: 600px) {
+            .photo-gallery {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .photo-gallery img {
+                width: 90vw;
+                max-width: 100%;
+            }
+        }
+
+        footer {
+            margin-top: 2em;
+            color: #d72660;
+        }
+
+        a {
+            color: #d72660;
+        }
+
+        a:hover {
+            color: #a0133a;
+        }
+
+        /* Dark Mode */
+        body.darkMode {
+            background-color: #1a1a1a;
+            color: #f8dfe8;
+        }
+
+        body.darkMode h1,
+        body.darkMode h2 {
+            color: #ff79a8;
+        }
+
+        body.darkMode img {
+            border-color: #ff79a8;
+            box-shadow: 0 2px 10px rgba(255, 121, 168, 0.2);
+        }
+
+        body.darkMode footer {
+            color: #ff79a8;
+        }
+
+        /* Dark Mode Button */
+        #darkModeButton {
+            padding: 0.5em 1em;
+            margin-bottom: 1em;
+            background-color: #d72660;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        #darkModeButton:hover {
+            background-color: #a0133a;
+        }
+
+        body.darkMode #darkModeButton {
+            background-color: #ff79a8;
+            color: #1a1a1a;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Dark Mode Toggle Button -->
+    <button id="darkModeButton">Dark Mode</button>
+
+    <header>
+        <h1>Pacific Rhododendron</h1>
+        <h2>Alternate Names</h2>
+        <p>Also known as Rhododendron macrophyllum, this plant is commonly referred to as the Coast Rhododendron.</p>
+    </header>
+
+    <section>
+        <h2>Physical Size</h2>
+        <p>The Pacific Rhododendron can grow up to 15 feet tall and 10 feet wide, with large, leathery leaves that can reach up to 12 inches in length.</p>
+    </section>
+
+    <section>
+        <h2>Geography</h2>
+        <p>This species is native to the Pacific Northwest region of North America, thriving in coastal forests and mountainous areas.</p>
+    </section>
+
+    <section>
+        <h2>Climate</h2>
+        <p>The Pacific Rhododendron prefers a mild, moist climate with well-drained soil and partial shade.</p>
+    </section>
+
+    <section>
+        <h2>Images</h2>
+        <div class="photo-gallery">
+            <img src="amit-merchant-MXcjSLMOIwU-unsplash.jpg" alt>="Pacific Rhododendron in winter">
+            <img src="tina-sara-d_yyDFV-g-s-unsplash.jpg" alt>="Rhododendron in woods">
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Tori's Rhododendron Project</p>
+    </footer>
+
+    <script>
+        // Dark Mode Toggle
+        document.addEventListener("DOMContentLoaded", function () {
+            const button = document.querySelector("#darkModeButton");
+            const body = document.querySelector("body");
+
+            button.addEventListener("click", function () {
+                body.classList.toggle("darkMode");
+            });
+        });
+    </script>
+
+</body>
+
+</html>
+ alt="Pacific Rhododendron in winter">
+            <img src="tina-sara-d_yyDFV-g-s-unsplash.jpg" alt="Rhododendron in woods">
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Tori's Rhododendron Project</p>
+    </footer>
+
+    <script>
+        // Dark Mode Toggle
+        document.addEventListener("DOMContentLoaded", function () {
+            const button = document.querySelector("#darkModeButton");
+            const body = document.querySelector("body");
+
+            button.addEventListener("click", function () {
+                body.classList.toggle("darkMode");
+            });
+        });
+    </script>
+
+</body>
+
+</html>
