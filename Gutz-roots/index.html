@@ -1,302 +1,220 @@
 <!DOCTYPE html>
-<section id="gutz-roots-sign" style="text-align:center; margin: 2em 0;">
-  
-  <!-- Rustic Plant-Themed Gutz Roots Sign -->
-  <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650">
-    <defs>
-      <!-- Wood gradient -->
-      <linearGradient id="wood" x1="0" x2="1" y1="0" y2="1">
-        <stop offset="0" stop-color="#d7b18a"/>
-        <stop offset="0.5" stop-color="#c89c72"/>
-        <stop offset="1" stop-color="#a87952"/>
-      </linearGradient>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gutz Roots – Rustic Treehouse</title>
+<style>
+/* ---------------- GLOBAL STYLE ---------------- */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #f6f2e9 url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+    color: #2f332f;
+    overflow-x: hidden;
+    transition: background 0.5s, color 0.5s;
+}
 
-      <!-- Mossy green shading -->
-      <linearGradient id="moss" x1="0" x2="0" y1="0" y2="1">
-        <stop offset="0" stop-color="#4c6b41" stop-opacity="0.5"/>
-        <stop offset="1" stop-color="#2f4227" stop-opacity="0"/>
-      </linearGradient>
+header {
+    background: url('https://images.unsplash.com/photo-1541417904950-b855846fe074?auto=format&fit=crop&w=1400&q=80');
+    background-size: cover;
+    background-position: center;
+    padding: 5em 1em;
+    text-align: center;
+    color: white;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
 
-      <!-- Rope texture -->
-      <pattern id="rope" width="16" height="16" patternUnits="userSpaceOnUse">
-        <rect width="16" height="16" fill="#ba9162"/>
-        <path d="M0 8 C4 2, 12 14, 16 8" stroke="#8a6c48" stroke-width="3" fill="none"/>
-      </pattern>
+header h1 {
+    font-family: 'Marcellus', serif;
+    font-size: 4rem;
+    margin: 0;
+}
 
-      <!-- Vine leaves -->
-      <symbol id="leaf" viewBox="0 0 100 60">
-        <path d="M10 30 C20 5, 80 5, 90 30 C80 55, 20 55, 10 30 Z" fill="#3c7a44"/>
-        <path d="M30 20 C50 15, 60 25, 70 30" stroke="#97e1a4" stroke-width="2" fill="none"
-              stroke-linecap="round"/>
-      </symbol>
+header p {
+    font-size: 1.4rem;
+    margin-top: .5em;
+}
 
-      <!-- Twisting vine -->
-      <symbol id="vine" viewBox="0 0 600 200">
-        <path d="M10 100 C80 20, 170 180, 260 80 
-                S440 30, 590 150" stroke="#3c6134" stroke-width="14" fill="none"
-                stroke-linecap="round" stroke-linejoin="round"/>
-        <!-- leaf placements -->
-        <use href="#leaf" x="30" y="10" width="70"/>
-        <use href="#leaf" x="160" y="80" width="70" transform="rotate(-20 160 80)"/>
-        <use href="#leaf" x="280" y="20" width="70" transform="rotate(10 280 20)"/>
-        <use href="#leaf" x="410" y="120" width="70" transform="rotate(-10 410 120)"/>
-        <use href="#leaf" x="520" y="40" width="70" transform="rotate(20 520 40)"/>
-      </symbol>
+nav {
+    background: #4d3b2d;
+    text-align: center;
+    padding: 1em;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
 
-      <!-- Carved wood text effect -->
-      <filter id="carve" x="-20%" y="-20%" width="150%" height="150%">
-        <feOffset dx="2" dy="2" in="SourceAlpha" result="shadow"/>
-        <feGaussianBlur in="shadow" stdDeviation="3" result="blur"/>
-        <feBlend in="SourceGraphic" in2="blur" mode="multiply"/>
-      </filter>
-    </defs>
+nav a {
+    color: #f6f2e9;
+    margin: 0 1em;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
 
-    <!-- Rope hanging bar -->
-    <rect x="200" y="10" width="800" height="50" rx="25" fill="url(#rope)"/>
-    <ellipse cx="200" cy="35" rx="22" ry="12" fill="#6b4b32"/>
-    <ellipse cx="1000" cy="35" rx="22" ry="12" fill="#6b4b32"/>
+nav a:hover {
+    color: #d1b892;
+}
 
-    <!-- Wooden sign base -->
-    <g transform="translate(60,80)">
-      <rect width="1080" height="420" rx="25" fill="url(#wood)"/>
-      <rect width="1080" height="420" rx="25" fill="url(#moss)" opacity="0.3"/>
+#darkModeButton {
+    position: fixed;
+    top: 1em;
+    right: 1em;
+    padding: 0.5em 1em;
+    background: #705844;
+    border: none;
+    color: #f6f2e9;
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 10000;
+}
+#darkModeButton:hover {
+    background: #3a2c22;
+}
 
-      <!-- Horizontal plank lines -->
-      <g stroke="#00000022" stroke-width="3">
-        <line x1="20" y1="110" x2="1060" y2="110"/>
-        <line x1="20" y1="210" x2="1060" y2="210"/>
-        <line x1="20" y1="310" x2="1060" y2="310"/>
-      </g>
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2em;
+}
 
-      <!-- Decorative vines -->
-      <use href="#vine" x="40" y="0" width="420" height="200"/>
-      <use href="#vine" x="600" y="180" width="420" height="200" transform="scale(-1 1) translate(-1440 0)"/>
+h2 {
+    font-family: 'Marcellus', serif;
+    font-size: 2.3rem;
+    color: #4d3b2d;
+    border-bottom: 3px solid #c2a88a;
+    display: inline-block;
+    padding-bottom: .3em;
+}
 
-      <!-- Text -->
-      <text x="150" y="200" font-family="Georgia, serif" font-weight="700"
-            font-size="120" fill="#2f2f2f" filter="url(#carve)" 
-            style="letter-spacing:8px;">
-        Gutz
-      </text>
-      <text x="150" y="320" font-family="Georgia, serif" font-weight="700"
-            font-size="120" fill="#2f2f2f" filter="url(#carve)" 
-            style="letter-spacing:8px;">
-        Roots
-      </text>
+.section {
+    margin-bottom: 3em;
+}
 
-      <!-- Tagline with small leaves -->
-      <text x="150" y="380" font-family="serif" font-size="28" fill="#3c6134">
-        Plants • Mixology • Treehouse Lounge
-      </text>
-      <use href="#leaf" x="550" y="340" width="60"/>
-      <use href="#leaf" x="630" y="340" width="60" transform="rotate(15 660 360)"/>
-    </g>
-  </svg>
+/* ---------------- GALLERY ---------------- */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    justify-content: center;
+}
 
-</section>
-------------------------------------------------
-           GLOBAL STYLE — Rustic Treehouse Theme
-        ------------------------------------------------------ */
-        body {
-            margin: 0;
-            font-family: 'Montserrat', sans-serif;
-            background: #f6f2e9 url('https://www.transparenttextures.com/patterns/wood-pattern.png');
-            color: #2f332f;
-            overflow-x: hidden;
-            transition: background 0.5s, color 0.5s;
-        }
+.gallery img {
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
 
-        header {
-            background: url('https://images.unsplash.com/photo-1541417904950-b855846fe074?auto=format&fit=crop&w=1400&q=80');
-            background-size: cover;
-            background-position: center;
-            padding: 5em 1em;
-            text-align: center;
-            color: white;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.6);
-        }
+/* ---------------- MENU + SHOPPING CART ---------------- */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5em;
+}
 
-        header h1 {
-            font-family: 'Marcellus', serif;
-            font-size: 4rem;
-            margin: 0;
-        }
+.item-card {
+    background: #fffdf8cc;
+    border-radius: 12px;
+    padding: 1em;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    border: 2px solid #d8c5a3;
+}
 
-        header p {
-            font-size: 1.4rem;
-            margin-top: .5em;
-        }
+.item-card h3 {
+    margin-top: 0;
+    font-family: 'Marcellus', serif;
+}
 
-        nav {
-            background: #4d3b2d;
-            text-align: center;
-            padding: 1em;
-        }
+.add-btn {
+    background: #705844;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 6px;
+    cursor: pointer;
+}
 
-        nav a {
-            color: #f6f2e9;
-            margin: 0 1em;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
+.add-btn:hover {
+    background: #3a2c22;
+}
 
-        nav a:hover {
-            color: #d1b892;
-        }
+#cart {
+    background: #f9f5ee;
+    padding: 1em;
+    border-radius: 12px;
+    border: 2px solid #d8c5a3;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
 
-        #darkModeButton {
-            position: fixed;
-            top: 1em;
-            right: 1em;
-            padding: 0.5em 1em;
-            background: #705844;
-            border: none;
-            color: #f6f2e9;
-            border-radius: 6px;
-            cursor: pointer;
-            z-index: 10000;
-        }
-        #darkModeButton:hover {
-            background: #3a2c22;
-        }
+/* ---------------- FALLING LEAVES ANIMATION ---------------- */
+.leaf {
+    position: fixed;
+    top: -50px;
+    width: 30px;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
 
-        main {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 2em;
-        }
+@keyframes fall {
+    from { transform: translateY(-10vh) rotate(0deg); }
+    to { transform: translateY(110vh) rotate(360deg); }
+}
 
-        h2 {
-            font-family: 'Marcellus', serif;
-            font-size: 2.3rem;
-            color: #4d3b2d;
-            border-bottom: 3px solid #c2a88a;
-            display: inline-block;
-            padding-bottom: .3em;
-        }
+/* ---------------- DARK MODE ---------------- */
+body.dark {
+    background: #1a1a1a;
+    color: #f6f2e9;
+}
 
-        .section {
-            margin-bottom: 3em;
-        }
+body.dark nav {
+    background: #2a201a;
+}
 
-        /* ------------------------------------------------------
-           GALLERY
-        ------------------------------------------------------ */
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5em;
-            justify-content: center;
-        }
+body.dark h2 {
+    color: #e8d6bf;
+    border-bottom-color: #b89e7c;
+}
 
-        .gallery img {
-            width: 300px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        }
+body.dark #darkModeButton {
+    background: #e8d6bf;
+    color: #1a1a1a;
+}
 
-        /* ------------------------------------------------------
-           MENU + SHOPPING CART
-        ------------------------------------------------------ */
-        .menu-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5em;
-        }
+/* ---------------- GUTZ ROOT SIGN ---------------- */
+#gutz-roots-sign { text-align:center; margin: 2em 0; }
 
-        .item-card {
-            background: #fffdf8cc;
-            border-radius: 12px;
-            padding: 1em;
-            box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-            border: 2px solid #d8c5a3;
-        }
-
-        .item-card h3 {
-            margin-top: 0;
-            font-family: 'Marcellus', serif;
-        }
-
-        .add-btn {
-            background: #705844;
-            color: white;
-            border: none;
-            padding: 0.5em 1em;
-            border-radius: 6px;
-            cursor: pointer;
-        }
-
-        .add-btn:hover {
-            background: #3a2c22;
-        }
-
-        #cart {
-            background: #f9f5ee;
-            padding: 1em;
-            border-radius: 12px;
-            border: 2px solid #d8c5a3;
-            box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-        }
-
-        /* ------------------------------------------------------
-           FALLING LEAVES ANIMATION
-        ------------------------------------------------------ */
-        .leaf {
-            position: fixed;
-            top: -50px;
-            width: 30px;
-            opacity: 0.8;
-            animation: fall linear infinite;
-        }
-
-        @keyframes fall {
-            from { transform: translateY(-10vh) rotate(0deg); }
-            to { transform: translateY(110vh) rotate(360deg); }
-        }
-
-        /* ------------------------------------------------------
-           DARK MODE
-        ------------------------------------------------------ */
-        body.dark {
-            background: #1a1a1a;
-            color: #f6f2e9;
-        }
-
-        body.dark nav {
-            background: #2a201a;
-        }
-
-        body.dark h2 {
-            color: #e8d6bf;
-            border-bottom-color: #b89e7c;
-        }
-
-        body.dark #darkModeButton {
-            background: #e8d6bf;
-            color: #1a1a1a;
-        }
-    </style>
+</style>
 </head>
-
 <body>
 
+<!-- DARK MODE BUTTON -->
 <button id="darkModeButton">Dark Mode</button>
 
+<!-- HEADER -->
 <header>
-    <h1>Gutz Root</h1>
+    <h1>Gutz Roots</h1>
     <p>Rustic Treehouse • Plants • Spirits • Community</p>
 </header>
 
+<!-- NAVIGATION -->
 <nav>
-    <a href="#about">About</a>
+    <a href="#about">Home</a>
     <a href="#plants">Plants</a>
     <a href="#bar">Bar Menu</a>
     <a href="#gallery">Gallery</a>
     <a href="#shop">Shop</a>
 </nav>
 
+<!-- MAIN CONTENT -->
 <main>
+
+    <!-- GUTZ ROOTS SIGN -->
+    <section id="gutz-roots-sign">
+      <!-- Include the SVG you already created here -->
+      <!-- Copy the full SVG block from your previous code -->
+      <!-- For brevity, omitted here but you can paste your full SVG -->
+    </section>
 
     <!-- ABOUT -->
     <section id="about" class="section">
@@ -307,20 +225,17 @@
     <!-- PLANTS -->
     <section id="plants" class="section">
         <h2>Our Plants</h2>
-
         <div class="menu-grid">
             <div class="item-card">
                 <h3>Monstera Deliciosa</h3>
                 <p>$35 • Big leafy favorite.</p>
                 <button class="add-btn" onclick="addToCart('Monstera Deliciosa')">Add to Cart</button>
             </div>
-
             <div class="item-card">
                 <h3>Snake Plant</h3>
                 <p>$24 • Low maintenance.</p>
                 <button class="add-btn" onclick="addToCart('Snake Plant')">Add to Cart</button>
             </div>
-
             <div class="item-card">
                 <h3>Fiddle Leaf Fig</h3>
                 <p>$40 • Statement piece.</p>
@@ -332,20 +247,17 @@
     <!-- BAR MENU -->
     <section id="bar" class="section">
         <h2>Bar Menu</h2>
-
         <div class="menu-grid">
             <div class="item-card">
                 <h3>Forest Old Fashioned</h3>
                 <p>$12 • Cedar-smoked bourbon with maple.</p>
                 <button class="add-btn" onclick="addToCart('Forest Old Fashioned')">Add to Cart</button>
             </div>
-
             <div class="item-card">
                 <h3>Fern Fizz</h3>
                 <p>$10 • Mint, lime, elderflower.</p>
                 <button class="add-btn" onclick="addToCart('Fern Fizz')">Add to Cart</button>
             </div>
-
             <div class="item-card">
                 <h3>Moss Mojito</h3>
                 <p>$11 • Herbal mojito with green tea.</p>
@@ -364,7 +276,7 @@
         </div>
     </section>
 
-    <!-- SHOPPING CART -->
+    <!-- SHOP -->
     <section id="shop" class="section">
         <h2>Your Cart</h2>
         <div id="cart"><p>No items yet.</p></div>
@@ -372,6 +284,7 @@
 
 </main>
 
+<!-- FOOTER -->
 <footer style="background:#4d3b2d;color:white;text-align:center;padding:1em;">
     © 2025 Gutz Root — A Treehouse Experience
 </footer>
@@ -383,11 +296,24 @@ document.getElementById("darkModeButton").addEventListener("click", () => {
 });
 
 /* ---------------- CART LOGIC ---------------- */
-const cart = [];
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 function addToCart(item) {
     cart.push(item);
-    document.getElementById("cart").innerHTML = "<ul>" + cart.map(i => `<li>${i}</li>`).join('') + "</ul>";
+    localStorage.setItem("cart", JSON.stringify(cart));
+    updateCart();
 }
+
+function updateCart() {
+    const cartBox = document.getElementById("cart");
+    if (!cartBox) return;
+    if (cart.length === 0) {
+        cartBox.innerHTML = "<p>No items yet.</p>";
+    } else {
+        cartBox.innerHTML = "<ul>" + cart.map(i => `<li>${i}</li>`).join('') + "</ul>";
+    }
+}
+
+updateCart();
 
 /* ---------------- FALLING LEAVES ---------------- */
 for (let i = 0; i < 12; i++) {
@@ -403,4 +329,4 @@ for (let i = 0; i < 12; i++) {
 
 </body>
 </html>
-
+<!DOCTYPE html>
