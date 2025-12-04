@@ -1,41 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gutz Root — Plants & Bar</title>
 
+    <!-- Rustic Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+
     <style>
-        /* ---------- GLOBAL STYLES ---------- */
+        /* ------------------------------------------------------
+           GLOBAL STYLE — Rustic Treehouse Theme
+        ------------------------------------------------------ */
         body {
             margin: 0;
-            font-family: "Arial", sans-serif;
-            background-color: #f3f8f3;
-            color: #2e3e2e;
-            transition: background 0.4s, color 0.4s;
+            font-family: 'Montserrat', sans-serif;
+            background: #f6f2e9 url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+            color: #2f332f;
+            overflow-x: hidden;
+            transition: background 0.5s, color 0.5s;
         }
 
         header {
-            background: #1f3d1f;
-            color: white;
-            padding: 1.5em;
+            background: url('https://images.unsplash.com/photo-1541417904950-b855846fe074?auto=format&fit=crop&w=1400&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 5em 1em;
             text-align: center;
+            color: white;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+        }
+
+        header h1 {
+            font-family: 'Marcellus', serif;
+            font-size: 4rem;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.4rem;
+            margin-top: .5em;
         }
 
         nav {
+            background: #4d3b2d;
             text-align: center;
-            margin-top: 1em;
+            padding: 1em;
         }
 
         nav a {
+            color: #f6f2e9;
             margin: 0 1em;
             text-decoration: none;
-            color: #1f3d1f;
             font-weight: bold;
+            font-size: 1.1rem;
         }
 
         nav a:hover {
-            color: #4f8f4f;
+            color: #d1b892;
         }
 
         #darkModeButton {
@@ -43,145 +65,257 @@
             top: 1em;
             right: 1em;
             padding: 0.5em 1em;
-            background: #4f8f4f;
+            background: #705844;
             border: none;
-            color: white;
-            border-radius: 8px;
+            color: #f6f2e9;
+            border-radius: 6px;
             cursor: pointer;
+            z-index: 10000;
         }
-
         #darkModeButton:hover {
-            background: #1f3d1f;
+            background: #3a2c22;
         }
 
         main {
-            padding: 2em;
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
+            padding: 2em;
         }
 
         h2 {
-            color: #2c5c2c;
+            font-family: 'Marcellus', serif;
+            font-size: 2.3rem;
+            color: #4d3b2d;
+            border-bottom: 3px solid #c2a88a;
+            display: inline-block;
+            padding-bottom: .3em;
         }
 
         .section {
-            margin-bottom: 2em;
+            margin-bottom: 3em;
         }
 
-        /* ---------- GALLERY ---------- */
+        /* ------------------------------------------------------
+           GALLERY
+        ------------------------------------------------------ */
         .gallery {
             display: flex;
             flex-wrap: wrap;
-            gap: 1em;
+            gap: 1.5em;
             justify-content: center;
         }
 
         .gallery img {
-            width: 280px;
-            border-radius: 10px;
-            box-shadow: 0 3px 7px rgba(0,0,0,0.15);
+            width: 300px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
 
-        /* ---------- DARK MODE ---------- */
+        /* ------------------------------------------------------
+           MENU + SHOPPING CART
+        ------------------------------------------------------ */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5em;
+        }
+
+        .item-card {
+            background: #fffdf8cc;
+            border-radius: 12px;
+            padding: 1em;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+            border: 2px solid #d8c5a3;
+        }
+
+        .item-card h3 {
+            margin-top: 0;
+            font-family: 'Marcellus', serif;
+        }
+
+        .add-btn {
+            background: #705844;
+            color: white;
+            border: none;
+            padding: 0.5em 1em;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .add-btn:hover {
+            background: #3a2c22;
+        }
+
+        #cart {
+            background: #f9f5ee;
+            padding: 1em;
+            border-radius: 12px;
+            border: 2px solid #d8c5a3;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+        }
+
+        /* ------------------------------------------------------
+           FALLING LEAVES ANIMATION
+        ------------------------------------------------------ */
+        .leaf {
+            position: fixed;
+            top: -50px;
+            width: 30px;
+            opacity: 0.8;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            from { transform: translateY(-10vh) rotate(0deg); }
+            to { transform: translateY(110vh) rotate(360deg); }
+        }
+
+        /* ------------------------------------------------------
+           DARK MODE
+        ------------------------------------------------------ */
         body.dark {
-            background-color: #102010;
-            color: #e8f5e8;
+            background: #1a1a1a;
+            color: #f6f2e9;
         }
 
-        body.dark header {
-            background: #0a180a;
-        }
-
-        body.dark nav a {
-            color: #c8e6c8;
+        body.dark nav {
+            background: #2a201a;
         }
 
         body.dark h2 {
-            color: #a4d8a4;
+            color: #e8d6bf;
+            border-bottom-color: #b89e7c;
         }
 
         body.dark #darkModeButton {
-            background: #a4d8a4;
-            color: #102010;
-        }
-
-        body.dark #darkModeButton:hover {
-            background: #c1ecc1;
-        }
-
-        footer {
-            background: #1f3d1f;
-            color: white;
-            padding: 1em;
-            text-align: center;
-            margin-top: 2em;
+            background: #e8d6bf;
+            color: #1a1a1a;
         }
     </style>
 </head>
 
 <body>
 
-    <!-- DARK MODE BUTTON -->
-    <button id="darkModeButton">Dark Mode</button>
+<button id="darkModeButton">Dark Mode</button>
 
-    <!-- HEADER -->
-    <header>
-        <h1>Gutz Root</h1>
-        <p>Where Nature Meets Spirits</p>
-    </header>
+<header>
+    <h1>Gutz Root</h1>
+    <p>Rustic Treehouse • Plants • Spirits • Community</p>
+</header>
 
-    <!-- NAV BAR -->
-    <nav>
-        <a href="#about">About</a>
-        <a href="#plants">Plants</a>
-        <a href="#bar">The Bar</a>
-        <a href="#gallery">Gallery</a>
-    </nav>
+<nav>
+    <a href="#about">About</a>
+    <a href="#plants">Plants</a>
+    <a href="#bar">Bar Menu</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#shop">Shop</a>
+</nav>
 
-    <!-- MAIN CONTENT -->
-    <main>
+<main>
 
-        <!-- ABOUT -->
-        <section id="about" class="section">
-            <h2>About Us</h2>
-            <p>Gutz Root is a unique fusion of greenery and craft cocktails. Step into a warm, lush environment filled with houseplants, rare species, and towering trees — all surrounding a full bar set in the heart of the shop. Whether you're here for a new fernfriend or a botanically-inspired drink, Gutz Root blends nature and community into one unforgettable experience.</p>
-        </section>
+    <!-- ABOUT -->
+    <section id="about" class="section">
+        <h2>About Us</h2>
+        <p>Welcome to Gutz Root — a rustic treehouse-inspired plant shop wrapped around a full botanical bar. Sip handcrafted herbal cocktails beneath hanging ferns, towering trees, and warm wooden beams. Whether you're adopting a new plant friend or unwinding with a moss-infused mocktail, the treehouse awaits you.</p>
+    </section>
 
-        <!-- PLANTS -->
-        <section id="plants" class="section">
-            <h2>Our Plants</h2>
-            <p>From tropical foliage to hardy desert succulents, our plant collection grows with the seasons. Every plant is hand-selected for health, beauty, and personality — just waiting for its new home.</p>
-        </section>
+    <!-- PLANTS -->
+    <section id="plants" class="section">
+        <h2>Our Plants</h2>
 
-        <!-- BAR -->
-        <section id="bar" class="section">
-            <h2>The Bar at Gutz Root</h2>
-            <p>Our full bar features botanical cocktails, herb-infused syrups, small-batch spirits, and zero-proof options inspired by the natural world. Sip among the leaves in a space designed to bring people together.</p>
-        </section>
-
-        <!-- GALLERY -->
-        <section id="gallery" class="section">
-            <h2>Gallery</h2>
-            <div class="gallery">
-                <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6" alt="Plant shop">
-                <img src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9" alt="Bar with plants">
-                <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6" alt="Greenery indoors">
+        <div class="menu-grid">
+            <div class="item-card">
+                <h3>Monstera Deliciosa</h3>
+                <p>$35 • Big leafy favorite.</p>
+                <button class="add-btn" onclick="addToCart('Monstera Deliciosa')">Add to Cart</button>
             </div>
-        </section>
 
-    </main>
+            <div class="item-card">
+                <h3>Snake Plant</h3>
+                <p>$24 • Low maintenance.</p>
+                <button class="add-btn" onclick="addToCart('Snake Plant')">Add to Cart</button>
+            </div>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2025 Gutz Root — Plants • Spirits • Community</p>
-    </footer>
+            <div class="item-card">
+                <h3>Fiddle Leaf Fig</h3>
+                <p>$40 • Statement piece.</p>
+                <button class="add-btn" onclick="addToCart('Fiddle Leaf Fig')">Add to Cart</button>
+            </div>
+        </div>
+    </section>
 
-    <script>
-        // DARK MODE TOGGLE
-        document.getElementById("darkModeButton").addEventListener("click", () => {
-            document.body.classList.toggle("dark");
-        });
-    </script>
+    <!-- BAR MENU -->
+    <section id="bar" class="section">
+        <h2>Bar Menu</h2>
+
+        <div class="menu-grid">
+            <div class="item-card">
+                <h3>Forest Old Fashioned</h3>
+                <p>$12 • Cedar-smoked bourbon with maple.</p>
+                <button class="add-btn" onclick="addToCart('Forest Old Fashioned')">Add to Cart</button>
+            </div>
+
+            <div class="item-card">
+                <h3>Fern Fizz</h3>
+                <p>$10 • Mint, lime, elderflower.</p>
+                <button class="add-btn" onclick="addToCart('Fern Fizz')">Add to Cart</button>
+            </div>
+
+            <div class="item-card">
+                <h3>Moss Mojito</h3>
+                <p>$11 • Herbal mojito with green tea.</p>
+                <button class="add-btn" onclick="addToCart('Moss Mojito')">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section">
+        <h2>Gallery</h2>
+        <div class="gallery">
+            <img src="https://images.unsplash.com/photo-1528222354212-a29563a59d9c" alt="Treehouse interior">
+            <img src="https://images.unsplash.com/photo-1581791534721-3c0531e38c98" alt="Plant bar">
+            <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6" alt="Greenery">
+        </div>
+    </section>
+
+    <!-- SHOPPING CART -->
+    <section id="shop" class="section">
+        <h2>Your Cart</h2>
+        <div id="cart"><p>No items yet.</p></div>
+    </section>
+
+</main>
+
+<footer style="background:#4d3b2d;color:white;text-align:center;padding:1em;">
+    © 2025 Gutz Root — A Treehouse Experience
+</footer>
+
+<script>
+/* ---------------- DARK MODE ---------------- */
+document.getElementById("darkModeButton").addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+});
+
+/* ---------------- CART LOGIC ---------------- */
+const cart = [];
+function addToCart(item) {
+    cart.push(item);
+    document.getElementById("cart").innerHTML = "<ul>" + cart.map(i => `<li>${i}</li>`).join('') + "</ul>";
+}
+
+/* ---------------- FALLING LEAVES ---------------- */
+for (let i = 0; i < 12; i++) {
+    const leaf = document.createElement("img");
+    leaf.src = "https://i.imgur.com/9vP5JXy.png";
+    leaf.classList.add("leaf");
+    leaf.style.left = Math.random() * 100 + "vw";
+    leaf.style.animationDuration = (5 + Math.random() * 6) + "s";
+    leaf.style.animationDelay = Math.random() * 5 + "s";
+    document.body.appendChild(leaf);
+}
+</script>
 
 </body>
 </html>
+
