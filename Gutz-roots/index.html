@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gutz Root — Plants & Bar</title>
+
+    <style>
+        /* ---------- GLOBAL STYLES ---------- */
+        body {
+            margin: 0;
+            font-family: "Arial", sans-serif;
+            background-color: #f3f8f3;
+            color: #2e3e2e;
+            transition: background 0.4s, color 0.4s;
+        }
+
+        header {
+            background: #1f3d1f;
+            color: white;
+            padding: 1.5em;
+            text-align: center;
+        }
+
+        nav {
+            text-align: center;
+            margin-top: 1em;
+        }
+
+        nav a {
+            margin: 0 1em;
+            text-decoration: none;
+            color: #1f3d1f;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #4f8f4f;
+        }
+
+        #darkModeButton {
+            position: fixed;
+            top: 1em;
+            right: 1em;
+            padding: 0.5em 1em;
+            background: #4f8f4f;
+            border: none;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        #darkModeButton:hover {
+            background: #1f3d1f;
+        }
+
+        main {
+            padding: 2em;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            color: #2c5c2c;
+        }
+
+        .section {
+            margin-bottom: 2em;
+        }
+
+        /* ---------- GALLERY ---------- */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+            justify-content: center;
+        }
+
+        .gallery img {
+            width: 280px;
+            border-radius: 10px;
+            box-shadow: 0 3px 7px rgba(0,0,0,0.15);
+        }
+
+        /* ---------- DARK MODE ---------- */
+        body.dark {
+            background-color: #102010;
+            color: #e8f5e8;
+        }
+
+        body.dark header {
+            background: #0a180a;
+        }
+
+        body.dark nav a {
+            color: #c8e6c8;
+        }
+
+        body.dark h2 {
+            color: #a4d8a4;
+        }
+
+        body.dark #darkModeButton {
+            background: #a4d8a4;
+            color: #102010;
+        }
+
+        body.dark #darkModeButton:hover {
+            background: #c1ecc1;
+        }
+
+        footer {
+            background: #1f3d1f;
+            color: white;
+            padding: 1em;
+            text-align: center;
+            margin-top: 2em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- DARK MODE BUTTON -->
+    <button id="darkModeButton">Dark Mode</button>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Gutz Root</h1>
+        <p>Where Nature Meets Spirits</p>
+    </header>
+
+    <!-- NAV BAR -->
+    <nav>
+        <a href="#about">About</a>
+        <a href="#plants">Plants</a>
+        <a href="#bar">The Bar</a>
+        <a href="#gallery">Gallery</a>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- ABOUT -->
+        <section id="about" class="section">
+            <h2>About Us</h2>
+            <p>Gutz Root is a unique fusion of greenery and craft cocktails. Step into a warm, lush environment filled with houseplants, rare species, and towering trees — all surrounding a full bar set in the heart of the shop. Whether you're here for a new fernfriend or a botanically-inspired drink, Gutz Root blends nature and community into one unforgettable experience.</p>
+        </section>
+
+        <!-- PLANTS -->
+        <section id="plants" class="section">
+            <h2>Our Plants</h2>
+            <p>From tropical foliage to hardy desert succulents, our plant collection grows with the seasons. Every plant is hand-selected for health, beauty, and personality — just waiting for its new home.</p>
+        </section>
+
+        <!-- BAR -->
+        <section id="bar" class="section">
+            <h2>The Bar at Gutz Root</h2>
+            <p>Our full bar features botanical cocktails, herb-infused syrups, small-batch spirits, and zero-proof options inspired by the natural world. Sip among the leaves in a space designed to bring people together.</p>
+        </section>
+
+        <!-- GALLERY -->
+        <section id="gallery" class="section">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6" alt="Plant shop">
+                <img src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9" alt="Bar with plants">
+                <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6" alt="Greenery indoors">
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 Gutz Root — Plants • Spirits • Community</p>
+    </footer>
+
+    <script>
+        // DARK MODE TOGGLE
+        document.getElementById("darkModeButton").addEventListener("click", () => {
+            document.body.classList.toggle("dark");
+        });
+    </script>
+
+</body>
+</html>
