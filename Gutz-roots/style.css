@@ -1,0 +1,9 @@
+.container-box {
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: 20px auto;
+    background: #ffffffaa;
+    backdrop-filter: blur(4px);
+}
