@@ -18,8 +18,6 @@
       --table-border:#1f2937;
     }
     html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;}
-    a{color:var(--accent);text-decoration:none}
-    a:hover{text-decoration:underline}
     .wrap{max-width:1100px;margin:0 auto;padding:32px}
     header{padding:24px 0 8px;border-bottom:1px solid var(--table-border);margin-bottom:24px}
     h1{font-size:clamp(1.6rem,2.8vw,2.2rem);margin:0 0 8px}
@@ -32,16 +30,18 @@
     tbody td{padding:10px;border-bottom:1px solid var(--table-border)}
     tbody tr:hover{background:#0d1220}
     footer{margin-top:28px;color:var(--muted);font-size:.9rem}
+    canvas{background:#0e1320;border-radius:12px;padding:10px;margin-top:20px}
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
       <h1>Website Performance & Security Benchmark</h1>
-      <p class="note">Category: Fashion retail. Mode: Desktop. Replace placeholders with your actual GTmetrix, Pingdom, and Sucuri results.</p>
+      <p class="note">Category: Fashion retail. Mode: Desktop. Replace placeholders with GTmetrix, Pingdom, and Sucuri results.</p>
       <span class="badge">Services: PageSpeed Insights, GTmetrix, Pingdom, Sucuri</span>
     </header>
 
+    <!-- Results Table -->
     <section class="card">
       <h2>Results table</h2>
       <div class="table-wrap">
@@ -56,18 +56,13 @@
               <th>Best practices</th>
               <th>SEO</th>
               <th>GTmetrix grade</th>
-              <th>GT Performance</th>
-              <th>GT Structure</th>
               <th>Pingdom grade</th>
               <th>Page size</th>
               <th>Load time</th>
               <th>Sucuri risk</th>
-              <th>Malware</th>
-              <th>Security notes</th>
             </tr>
           </thead>
           <tbody>
-            <!-- Nike -->
             <tr>
               <td class="site"><a href="https://www.nike.com" target="_blank" rel="noopener">Nike</a></td>
               <td>Desktop</td>
@@ -81,12 +76,7 @@
               <td>--</td>
               <td>--</td>
               <td>--</td>
-              <td>--</td>
-              <td>--</td>
-              <td>--</td>
-              <td>--</td>
             </tr>
-            <!-- Adidas -->
             <tr>
               <td class="site"><a href="https://www.adidas.com" target="_blank" rel="noopener">Adidas</a></td>
               <td>Desktop</td>
@@ -100,12 +90,7 @@
               <td>--</td>
               <td>--</td>
               <td>--</td>
-              <td>--</td>
-              <td>--</td>
-              <td>--</td>
-              <td>--</td>
             </tr>
-            <!-- Under Armour -->
             <tr>
               <td class="site"><a href="https://www.underarmour.com" target="_blank" rel="noopener">Under Armour</a></td>
               <td>Desktop</td>
@@ -119,24 +104,14 @@
               <td>--</td>
               <td>--</td>
               <td>--</td>
-              <td>--</td>
-              <td>--</td>
-              <td>--</td>
-              <td>--</td>
             </tr>
           </tbody>
         </table>
       </div>
-    </section>
 
-    <section class="card">
-      <h2>Short essay</h2>
-      <p>
-        Website performance directly influences user engagement and conversion. In fashion retail, high media density and dynamic content make optimization crucial. Based on tests with Nike, Adidas, and Under Armour, Core Web Vitals outcomes aligned with overall grades: sites that passed showed faster load times and smaller page sizes, while failing sites carried heavier assets and more render-blocking resources.
-      </p>
-      <p>
-        GTmetrix grades correlated with Pingdom load time; pages with better structure (fewer blocking scripts, optimized images, effective caching) consistently loaded faster. Security checks showed generally low risk across major brands; when risks appeared, they were often configuration-related (missing security headers, mixed content) rather than active malware. Overall, disciplined performance practices—minifying assets, deferring non-critical JS, compressing images, and adopting modern caching—translated into better user experience and competitiveness.
-      </p>
+      <!-- Bar Graph -->
+      <h2>Performance Comparison</h2>
+      <canvas id="resultsChart" width="400" height="200"></canvas>
     </section>
 
     <footer>
@@ -145,10 +120,33 @@
         <li><a href="https://www.nike.com" target="_blank" rel="noopener">Nike</a></li>
         <li><a href="https://www.adidas.com" target="_blank" rel="noopener">Adidas</a></li>
         <li><a href="https://www.underarmour.com" target="_blank" rel="noopener">Under Armour</a></li>
-        <li><a href="https://pagespeed.web.dev/" target="_blank" rel="noopener">Page Speed</a></li>
+        <li><a href</li>https://pagespeed.web.dev/" target="_blank" rel="noopener">Page Speed</a></li>
       </ul>
     </footer>
   </div>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('resultsChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Nike', 'Adidas', 'Under Armour'],
+        datasets: [{
+          label: 'PageSpeed Performance (Desktop)',
+          data: [45, 32, 55],
+          backgroundColor: ['#64d2ff','#f59e0b','#22c55e']
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: { beginAtZero: true, max: 100 }
+        }
+      }
+    });
+  </script>
 </body>
 </html>
 
