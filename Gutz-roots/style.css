@@ -1,11 +1,11 @@
-.container-box {
-    padding: 20px;
-    border: 2px solid #ccc;
-    border-radius: 12px;
-    max-width: 600px;
-    margin: 20px auto;
-    background: #ffffffaa;
-    backdrop-filter: blur(4px);
+/* HEADER BOXED TEXT */
+.boxed-header {
+  display: inline-block;
+  background: rgba(77, 59, 45, 0.8); /* semi-transparent dark box */
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
 }
 .menu-grid .item-card img {
   width: 100%;
