@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +21,7 @@
       padding: 5em 1em 2em 1em;
       text-align: center;
       color: white;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
     }
 
     header h1 {
@@ -28,10 +29,12 @@
       font-size: 4rem;
       margin: 0;
     }
+
     header p {
       font-size: 1.4rem;
       margin-top: .5em;
     }
+
     #mission {
       font-size: 1.2rem;
       margin-top: 1.5em;
@@ -39,7 +42,7 @@
       margin-left: auto;
       margin-right: auto;
       color: white;
-      text-shadow: 0 1px 6px rgba(0,0,0,0.5);
+      text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
     }
 
     nav {
@@ -58,6 +61,7 @@
       font-weight: bold;
       font-size: 1.1rem;
     }
+
     nav a:hover {
       color: #d1b892;
     }
@@ -74,6 +78,7 @@
       cursor: pointer;
       z-index: 10000;
     }
+
     #darkModeButton:hover {
       background: #3a2c22;
     }
@@ -105,10 +110,11 @@
       gap: 1.5em;
       justify-content: center;
     }
+
     .gallery img {
       width: 300px;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     }
 
     .menu-grid {
@@ -121,7 +127,7 @@
       background: #fffdf8cc;
       border-radius: 12px;
       padding: 1em;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
       border: 2px solid #d8c5a3;
     }
 
@@ -148,29 +154,34 @@
       padding: 1em;
       border-radius: 12px;
       border: 2px solid #d8c5a3;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
     }
 
     body.dark {
       background: #1a1a1a url('laura-barry-qQlyIytxhUs-unsplash.jpg') no-repeat center center fixed;
       color: #f6f2e9;
     }
+
     body.dark main {
-      background: rgba(30,30,30,0.8);
+      background: rgba(30, 30, 30, 0.8);
     }
+
     body.dark nav {
-      background: rgba(42,32,26,0.85);
+      background: rgba(42, 32, 26, 0.85);
     }
+
     body.dark h2 {
       color: #e8d6bf;
       border-bottom-color: #b89e7c;
     }
+
     body.dark #darkModeButton {
       background: #e8d6bf;
       color: #1a1a1a;
     }
   </style>
 </head>
+
 <body>
 
   <button id="darkModeButton">Dark Mode</button>
@@ -179,7 +190,10 @@
     <h1>Gutz Roots</h1>
     <p>Plants, Mixology, Treehouse Lounge</p>
     <div id="mission">
-      At Gutz Roots, our mission is to cultivate a sanctuary where nature, creativity, and community intertwine. We strive to bring the beauty of greenery into everyday life through thoughtfully curated plants, while offering handcrafted botanical cocktails that awaken the senses. Inspired by the warmth of a rustic treehouse, we create a space for relaxation, exploration, and connection with nature.
+      At Gutz Roots, our mission is to cultivate a sanctuary where nature, creativity, and community intertwine. We
+      strive to bring the beauty of greenery into everyday life through thoughtfully curated plants, while offering
+      handcrafted botanical cocktails that awaken the senses. Inspired by the warmth of a rustic treehouse, we create a
+      space for relaxation, exploration, and connection with nature.
     </div>
   </header>
 
@@ -195,27 +209,31 @@
 
     <section id="about" class="section">
       <h2>About Us</h2>
-      <p>Welcome to Gutz Roots — a rustic treehouse‑inspired plant shop wrapped around a full botanical bar. Sip handcrafted herbal cocktails beneath hanging ferns, towering trees, and warm wooden beams. Whether you're adopting a new plant friend or unwinding with a moss‑infused mocktail, the treehouse awaits you.</p>
+      <p>Welcome to Gutz Roots — a rustic treehouse‑inspired plant shop wrapped around a full botanical bar. Sip
+        handcrafted herbal cocktails beneath hanging ferns, towering trees, and warm wooden beams. Whether you're
+        adopting a new plant friend or unwinding with a moss‑infused mocktail, the treehouse awaits you.</p>
     </section>
 
     <section id="plants" class="section">
       <h2>Our Plants</h2>
-      <div class="menu-grid">
-        <div class="item-card">
-          <h3>Monstera Deliciosa</h3>
-          <p>$35 • Big leafy favorite.</p>
-          <button class="add-btn" onclick="addToCart('Monstera Deliciosa')">Add to Cart</button>
+      <h3 style="font-family: 'Marcellus', serif; margin-top: 2em;">Plant Inventory</h3>
+      <div class="gallery">
+        <div>
+          <img src="feey-TNTZ9XRisjQ-unsplash.jpg" alt="Fiddle Leaf Fig">
+          <p style="text-align:center; margin-top:0.5em;">Fiddle Leaf Fig • $40</p>
         </div>
-        <div class="item-card">
-          <h3>Snake Plant</h3>
-          <p>$24 • Low maintenance.</p>
-          <button class="add-btn" onclick="addToCart('Snake Plant')">Add to Cart</button>
+
+        <div>
+          <img src="parker-sturdivant--Lh6tVzDdMg-unsplash.jpg" alt="Snake Plant">
+          <p style="text-align:center; margin-top:0.5em;">Snake Plant • $24</p>
         </div>
-        <div class="item-card">
-          <h3>Fiddle Leaf Fig</h3>
-          <p>$40 • Statement piece.</p>
-          <button class="add-btn" onclick="addToCart('Fiddle Leaf Fig')">Add to Cart</button>
+
+        <div>
+          <img src="chris-lee-70l1tDAI6rM-unsplash.jpg" alt="Monstera Leaves">
+          <p style="text-align:center; margin-top:0.5em;">Monstera Deliciosa • $35</p>
         </div>
+      </div>
+
       </div>
     </section>
 
@@ -288,5 +306,5 @@
   </script>
 
 </body>
-</html>
 
+</html>
