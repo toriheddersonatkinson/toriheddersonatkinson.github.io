@@ -1,332 +1,227 @@
-<!DOCTYPE html>
-<html lang="en">
+/* GLOBAL STYLES */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: url('laura-barry-qQlyIytxhUs-unsplash.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #2f332f;
+  overflow-x: hidden;
+  transition: background 0.5s, color 0.5s;
+}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gutz Roots – Rustic Treehouse</title>
-  <link rel="stylesheet" href="style.css">
+header {
+  padding: 5em 1em 2em 1em;
+  text-align: center;
+  color: white;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
 
-  <!-- Animate.css -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  <style>
-    /* GLOBAL STYLES */
-    body {
-      margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      background: url('laura-barry-qQlyIytxhUs-unsplash.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: #2f332f;
-      overflow-x: hidden;
-      transition: background 0.5s, color 0.5s;
-    }
+header h1 {
+  font-family: 'Marcellus', serif;
+  font-size: 4rem;
+  margin: 0;
+}
 
-    header {
-      padding: 5em 1em 2em 1em;
-      text-align: center;
-      color: white;
-    }
+header p {
+  font-size: 1.4rem;
+  margin-top: 0.5em;
+}
 
-    .container-box {
-      display: inline-block;
-      padding: 2em;
-      background: rgba(0, 0, 0, 0.55);
-      border-radius: 12px;
-      max-width: 900px;
-      margin: 0 auto 2em auto;
-      text-align: center;
-    }
+#mission {
+  font-size: 1.2rem;
+  margin-top: 1.5em;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+}
 
-    .container-box h1 {
-      font-family: 'Marcellus', serif;
-      font-size: 3.5rem;
-      margin: 0.2em 0;
-    }
+/* BOX AROUND HEADER */
+.boxed-header {
+  display: inline-block;
+  background: rgba(77, 59, 45, 0.8);
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
 
-    .container-box p.subtitle {
-      font-size: 1.4rem;
-      margin: 0.5em 0 1em 0;
-    }
+nav {
+  background: rgba(77, 59, 45, 0.9);
+  text-align: center;
+  padding: 1em;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
 
-    .container-box p.mission {
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
+nav a {
+  color: #f6f2e9;
+  margin: 0 1em;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
 
-    nav {
-      background: rgba(77, 59, 45, 0.9);
-      text-align: center;
-      padding: 1em;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
+nav a:hover {
+  color: #d1b892;
+}
 
-    nav a {
-      color: #f6f2e9;
-      margin: 0 1em;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.1rem;
-    }
+#darkModeButton {
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  padding: 0.5em 1em;
+  background: #705844;
+  border: none;
+  color: #f6f2e9;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 10000;
+}
 
-    nav a:hover {
-      color: #d1b892;
-    }
+#darkModeButton:hover {
+  background: #3a2c22;
+}
 
-    #darkModeButton {
-      position: fixed;
-      top: 1em;
-      right: 1em;
-      padding: 0.5em 1em;
-      background: #705844;
-      border: none;
-      color: #f6f2e9;
-      border-radius: 6px;
-      cursor: pointer;
-      z-index: 10000;
-    }
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2em;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+}
 
-    #darkModeButton:hover {
-      background: #3a2c22;
-    }
+h2 {
+  font-family: 'Marcellus', serif;
+  font-size: 2.3rem;
+  color: #4d3b2d;
+  border-bottom: 3px solid #c2a88a;
+  display: inline-block;
+  padding-bottom: 0.3em;
+}
 
-    main {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 2em;
-      background: rgba(255, 255, 255, 0.8);
-      border-radius: 12px;
-    }
+.section {
+  margin-bottom: 3em;
+}
 
-    h2 {
-      font-family: 'Marcellus', serif;
-      font-size: 2.3rem;
-      color: #4d3b2d;
-      border-bottom: 3px solid #c2a88a;
-      display: inline-block;
-      padding-bottom: .3em;
-    }
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  justify-content: center;
+}
 
-    .section {
-      margin-bottom: 3em;
-    }
+.gallery img {
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
+}
 
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5em;
-      justify-content: center;
-    }
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5em;
+}
 
-    .gallery img {
-      width: 300px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    }
+.item-card {
+  background: #fffdf8cc;
+  border-radius: 12px;
+  padding: 1em;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  border: 2px solid #d8c5a3;
+  text-align: center;
+}
 
-    .menu-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5em;
-    }
+.item-card h3 {
+  margin-top: 0.5em;
+  font-family: 'Marcellus', serif;
+}
 
-    .item-card {
-      background: #fffdf8cc;
-      border-radius: 12px;
-      padding: 1em;
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-      border: 2px solid #d8c5a3;
-    }
+.item-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 0.5em;
+}
 
-    body.dark {
-      background: #1a1a1a url('laura-barry-qQlyIytxhUs-unsplash.jpg') no-repeat center center fixed;
-      color: #f6f2e9;
-    }
+#cart {
+  background: #f9f5ee;
+  padding: 1em;
+  border-radius: 12px;
+  border: 2px solid #d8c5a3;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
 
-    body.dark main {
-      background: rgba(30, 30, 30, 0.8);
-    }
+footer {
+  background: rgba(77,59,45,0.9);
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
 
-    body.dark nav {
-      background: rgba(42, 32, 26, 0.85);
-    }
+/* DARK MODE */
+body.dark {
+  background: #1a1a1a url('laura-barry-qQlyIytxhUs-unsplash.jpg') no-repeat center center fixed;
+  color: #f6f2e9;
+}
 
-    body.dark h2 {
-      color: #e8d6bf;
-      border-bottom-color: #b89e7c;
-    }
+body.dark main {
+  background: rgba(30, 30, 30, 0.8);
+}
 
-    body.dark #darkModeButton {
-      background: #e8d6bf;
-      color: #1a1a1a;
-    }
+body.dark nav {
+  background: rgba(42, 32, 26, 0.85);
+}
 
-    footer {
-      background: rgba(77,59,45,0.9);
-      color: white;
-      text-align: center;
-      padding: 1em;
-    }
+body.dark h2 {
+  color: #e8d6bf;
+  border-bottom-color: #b89e7c;
+}
 
-    @media (max-width: 768px) {
-      .gallery img {
-        width: 90%;
-      }
-      .container-box {
-        padding: 1.5em;
-      }
-    }
-  </style>
-</head>
+body.dark #darkModeButton {
+  background: #e8d6bf;
+  color: #1a1a1a;
+}
 
-<body>
+/* RESPONSIVE STYLES */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 3rem;
+  }
 
-  <button id="darkModeButton">Dark Mode</button>
+  header p {
+    font-size: 1.2rem;
+  }
 
-  <header>
-    <div class="container-box animate__animated" data-animate="animate__fadeInDown">
-      <h1>Gutz Roots</h1>
-      <p class="subtitle">Plants, Mixology, Treehouse Lounge</p>
-      <p class="mission">
-        At Gutz Roots, our mission is to cultivate a sanctuary where nature, creativity, and community intertwine. We
-        strive to bring the beauty of greenery into everyday life through thoughtfully curated plants, while offering
-        handcrafted botanical cocktails that awaken the senses. Inspired by the warmth of a rustic treehouse, we create a
-        space for relaxation, exploration, and connection with nature.
-      </p>
-    </div>
-  </header>
+  .gallery img,
+  .item-card img {
+    width: 100%;
+    height: auto;
+  }
 
-  <nav>
-    <a href="#about">Home</a>
-    <a href="#plants">Plants</a>
-    <a href="#bar">Bar Menu</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#shop">Shop</a>
-  </nav>
+  main {
+    padding: 1em;
+  }
+}
 
-  <main>
-    <section id="about" class="section animate__animated" data-animate="animate__fadeInUp">
-      <h2>About Us</h2>
-      <p>Welcome to Gutz Roots — a rustic treehouse‑inspired plant shop wrapped around a full botanical bar. Sip
-        handcrafted herbal cocktails beneath hanging ferns, towering trees, and warm wooden beams. Whether you're
-        adopting a new plant friend or unwinding with a moss‑infused mocktail, the treehouse awaits you.</p>
-    </section>
+@media (max-width: 480px) {
+  nav a {
+    display: block;
+    margin: 0.5em 0;
+  }
 
-    <section id="plants" class="section animate__animated" data-animate="animate__fadeInUp">
-      <h2>Our Plants</h2>
-      <h3>Plant Inventory</h3>
-      <div class="gallery">
-        <div>
-          <a href="feey-TNTZ9XRisjQ-unsplash.jpg" target="_blank">
-            <img src="feey-TNTZ9XRisjQ-unsplash.jpg" alt="Fiddle Leaf Fig">
-          </a>
-          <p>Fiddle Leaf Fig • $40</p>
-        </div>
+  header {
+    padding: 3em 1em 1em 1em;
+  }
 
-        <div>
-          <a href="parker-sturdivant--Lh6tVzDdMg-unsplash.jpg" target="_blank">
-            <img src="parker-sturdivant--Lh6tVzDdMg-unsplash.jpg" alt="Snake Plant">
-          </a>
-          <p>Snake Plant • $24</p>
-        </div>
+  h2 {
+    font-size: 1.8rem;
+  }
 
-        <div>
-          <a href="chris-lee-70l1tDAI6rM-unsplash.jpg" target="_blank">
-            <img src="chris-lee-70l1tDAI6rM-unsplash.jpg" alt="Monstera Leaves">
-          </a>
-          <p>Monstera Deliciosa • $35</p>
-        </div>
-
-        <div>
-          <a href="pothos.jpg" target="_blank">
-            <img src="pothos.jpg" alt="Pothos Plant">
-          </a>
-          <p>Pothos • $20</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="bar" class="section animate__animated" data-animate="animate__fadeInUp">
-      <h2>Bar Menu</h2>
-      <div class="menu-grid">
-        <div class="item-card animate__animated" data-animate="animate__fadeInUp">
-          <a href="jochem-raat-w8q_MyDGuA0-unsplash.jpg" target="_blank">
-            <img src="jochem-raat-w8q_MyDGuA0-unsplash.jpg" alt="Signature Herb Elixir">
-          </a>
-          <h3>Signature Herb Elixir</h3>
-          <p>A refreshing mix inspired by garden aromatics.</p>
-        </div>
-
-        <div class="item-card animate__animated" data-animate="animate__fadeInUp">
-          <a href="patrick-fore-e1eu-v1vXWs-unsplash.jpg" target="_blank">
-            <img src="patrick-fore-e1eu-v1vXWs-unsplash.jpg" alt="Old Fashioned">
-          </a>
-          <h3>Old Fashioned</h3>
-          <p>A classic profile with warm balanced finish.</p>  
-        </div>
-
-        <div class="item-card animate__animated" data-animate="animate__fadeInUp">
-          <a href="bon-vivant-ZBvCx9iAyu4-unsplash.jpg" target="_blank">
-            <img src="bon-vivant-ZBvCx9iAyu4-unsplash.jpg" alt="Golden Root Sour">
-          </a>
-          <h3>Golden Root Sour</h3>
-          <p>A smooth, citrus-forward blend layered with earthy undertones and a warm finish.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="gallery" class="section animate__animated" data-animate="animate__fadeInUp">
-      <h2>Gallery</h2>
-      <div class="gallery">
-        <a href="osman-hussaini-2CFbVi7ih9w-unsplash.jpg" target="_blank">
-          <img src="osman-hussaini-2CFbVi7ih9w-unsplash.jpg" alt="Plant Shop Interior">
-        </a>
-        <a href="ceyda-ciftci-dDVU6D_6T80-unsplash.jpg" target="_blank">
-          <img src="ceyda-ciftci-dDVU6D_6T80-unsplash.jpg" alt="Plant Shop Display">
-        </a>
-        <a href="zero-take-2zimLZ7aDOM-unsplash.jpg" target="_blank">
-          <img src="zero-take-2zimLZ7aDOM-unsplash.jpg" alt="Full Service Bar">
-        </a>
-      </div>
-    </section>
-
-    <section id="shop" class="section animate__animated" data-animate="animate__fadeInUp">
-      <h2>Your Cart</h2>
-      <div id="cart">
-        <p>No items yet.</p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    © 2025 Gutz Roots — A Treehouse Experience
-  </footer>
-
-  <script>
-    // DARK MODE
-    document.getElementById('darkModeButton').addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-    });
-
-    // ANIMATE ON SCROLL
-    function animateOnScroll() {
-      const elements = document.querySelectorAll('.animate__animated');
-      const windowHeight = window.innerHeight;
-
-      elements.forEach(el => {
-        const elementTop = el.getBoundingClientRect().top;
-        const animationClass = el.dataset.animate;
-
-        if (elementTop < windowHeight - 100) {
-          el.classList.add(animationClass);
-        }
-      });
-    }
-
-    window.addEventListener('scroll', animateOnScroll);
-    window.addEventListener('load', animateOnScroll);
-  </script>
-
-</body>
-</html>
+  header h1 {
+    font-size: 2.5rem;
+  }
+}
