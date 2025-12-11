@@ -6,7 +6,6 @@
   <title>Website Performance & Security Benchmark — Nike + Comparables</title>
   <meta name="description" content="Benchmarking website speed and security using PageSpeed Insights, GTmetrix, Pingdom, and Sucuri." />
   <style>
-    /* existing styles unchanged */
     :root{
       --bg:#0b0d10;
       --panel:#12161b;
@@ -30,7 +29,9 @@
     thead th{background:#0f172a;color:#bcd1ea;font-weight:600;text-align:left;padding:10px;border-bottom:1px solid var(--table-border)}
     tbody td{padding:10px;border-bottom:1px solid var(--table-border)}
     tbody tr:hover{background:#0d1220}
-    canvas{background:#0e1320;border-radius:12px;padding:10px;margin-top:20px}
+    footer{margin-top:28px;color:var(--muted);font-size:.9rem}
+    .activity-link{display:inline-block;margin-top:12px;padding:10px 16px;background:var(--accent);color:#000;font-weight:600;border-radius:8px;text-decoration:none}
+    .activity-link:hover{background:#22c55e;color:#fff}
   </style>
 </head>
 <body>
@@ -87,59 +88,19 @@
           </tbody>
         </table>
       </div>
-
-      <!-- Results Chart -->
-      <h2>Results chart</h2>
-      <canvas id="resultsChart" width="400" height="200"></canvas>
     </section>
 
-    <footer>
-      <p>Publish this file to GitHub Pages and share the URL.</p>
-    </footer>
-  </div>
+    <!-- Short Essay -->
+    <section class="card">
+      <h2>Short essay</h2>
+      <p>
+        Website performance directly influences user engagement and conversion. In fashion retail, high media density and dynamic content make optimization crucial. Based on tests with Nike and two comparable brands, Core Web Vitals outcomes aligned with overall grades: sites that passed showed faster load times and smaller page sizes, while failing sites carried heavier assets and more render-blocking resources.
+      </p>
+      <p>
+        GTmetrix grades correlated with Pingdom load time; pages with better structure (fewer blocking scripts, optimized images, effective caching) consistently loaded faster. Security checks showed generally low risk across major brands; when risks appeared, they were often configuration-related (missing security headers, mixed content) rather than active malware. Overall, disciplined performance practices—minifying assets, deferring non-critical JS, compressing images, and adopting modern caching—translated into better user experience and competitiveness.
+      </p>
+    </section>
 
-  <!-- Chart.js CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script>
-    const ctx = document.getElementById('resultsChart').getContext('2d');
-    const resultsChart = new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: ['Nike', 'Adidas', 'Under Armour'],
-        datasets: [
-          {
-            label: 'Performance',
-            data: [85, 72, 89],
-            backgroundColor: '#64d2ff'
-          },
-          {
-            label: 'Accessibility',
-            data: [92, 88, 95],
-            backgroundColor: '#22c55e'
-          },
-          {
-            label: 'Best Practices',
-            data: [90, 85, 92],
-            backgroundColor: '#f59e0b'
-          },
-          {
-            label: 'SEO',
-            data: [95, 90, 97],
-            backgroundColor: '#ef4444'
-          }
-        ]
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          legend: { labels: { color: '#e9eef5' } }
-        },
-        scales: {
-          x: { ticks: { color: '#e9eef5' } },
-          y: { ticks: { color: '#e9eef5' }, beginAtZero: true, max: 100 }
-        }
-      }
-    });
-  </script>
+  </div>
 </body>
 </html>
