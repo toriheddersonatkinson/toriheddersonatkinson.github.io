@@ -115,6 +115,7 @@
       width: 300px;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      object-fit: cover;
     }
 
     .menu-grid {
@@ -129,24 +130,20 @@
       padding: 1em;
       box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
       border: 2px solid #d8c5a3;
+      text-align: center;
     }
 
     .item-card h3 {
-      margin-top: 0;
+      margin-top: 0.5em;
       font-family: 'Marcellus', serif;
     }
 
-    .add-btn {
-      background: #705844;
-      color: white;
-      border: none;
-      padding: 0.5em 1em;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    .add-btn:hover {
-      background: #3a2c22;
+    .item-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 0.5em;
     }
 
     #cart {
@@ -223,57 +220,53 @@
           <img src="feey-TNTZ9XRisjQ-unsplash.jpg" alt="Fiddle Leaf Fig">
           <p style="text-align:center; margin-top:0.5em;">Fiddle Leaf Fig • $40</p>
         </div>
-
         <div>
           <img src="parker-sturdivant--Lh6tVzDdMg-unsplash.jpg" alt="Snake Plant">
           <p style="text-align:center; margin-top:0.5em;">Snake Plant • $24</p>
         </div>
-
         <div>
           <img src="chris-lee-70l1tDAI6rM-unsplash.jpg" alt="Monstera Leaves">
           <p style="text-align:center; margin-top:0.5em;">Monstera Deliciosa • $35</p>
         </div>
       </div>
-
-      </div>
     </section>
 
     <section id="bar" class="section">
-  <h2>Bar Menu</h2>
-  <div class="menu-grid">
-    <div class="item-card">
-      <img src="jochem-raat-w8q_MyDGuA0-unsplash.jpg" alt="Signature Herb Elixir">
-      <h3>Signature Herb Elixir</h3>
-      <p>A refreshing mix inspired by garden aromatics.</p>
-    </div>
-    <div class="item-card">
-      <img src="patrick-fore-e1eu-v1vXWs-unsplash.jpg" alt="Old Fashioned">
-      <h3>Old Fashioned</h3>
-      <p>A classic profile with warm balanced finish.</p>  
-    </div>
-    <div class="item-card">
-      <img src="bon-vivant-ZBvCx9iAyu4-unsplash.jpg" alt="Golden Root Sour">
-      <h3>Golden Root Sour</h3>
-      <p>A smooth, citrus-forward blend layered with earthy undertones and a warm finish.</p>
-    </div>
-  </div>
-</section>
-
-      <section id="gallery" class="section">
-        <h2>Gallery</h2>
-        <div class="gallery">
-          <img src="osman-hussaini-2CFbVi7ih9w-unsplash.jpg" alt="Plant Shop Interior">
-          <img src="ceyda-ciftci-dDVU6D_6T80-unsplash.jpg" alt="Plant Shop Display">
-          <img src="zero-take-2zimLZ7aDOM-unsplash.jpg" alt="Full Service Bar">
+      <h2>Bar Menu</h2>
+      <div class="menu-grid">
+        <div class="item-card">
+          <img src="jochem-raat-w8q_MyDGuA0-unsplash.jpg" alt="Signature Herb Elixir">
+          <h3>Signature Herb Elixir</h3>
+          <p>A refreshing mix inspired by garden aromatics.</p>
         </div>
-      </section>
-
-      <section id="shop" class="section">
-        <h2>Your Cart</h2>
-        <div id="cart">
-          <p>No items yet.</p>
+        <div class="item-card">
+          <img src="patrick-fore-e1eu-v1vXWs-unsplash.jpg" alt="Old Fashioned">
+          <h3>Old Fashioned</h3>
+          <p>A classic profile with warm balanced finish.</p>  
         </div>
-      </section>
+        <div class="item-card">
+          <img src="bon-vivant-ZBvCx9iAyu4-unsplash.jpg" alt="Golden Root Sour">
+          <h3>Golden Root Sour</h3>
+          <p>A smooth, citrus-forward blend layered with earthy undertones and a warm finish.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section">
+      <h2>Gallery</h2>
+      <div class="gallery">
+        <img src="osman-hussaini-2CFbVi7ih9w-unsplash.jpg" alt="Plant Shop Interior">
+        <img src="ceyda-ciftci-dDVU6D_6T80-unsplash.jpg" alt="Plant Shop Display">
+        <img src="zero-take-2zimLZ7aDOM-unsplash.jpg" alt="Full Service Bar">
+      </div>
+    </section>
+
+    <section id="shop" class="section">
+      <h2>Your Cart</h2>
+      <div id="cart">
+        <p>No items yet.</p>
+      </div>
+    </section>
 
   </main>
 
@@ -286,29 +279,7 @@
     document.getElementById('darkModeButton').addEventListener('click', () => {
       document.body.classList.toggle('dark');
     });
-
-    // CART LOGIC
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-    function addToCart(item) {
-      cart.push(item);
-      localStorage.setItem('cart', JSON.stringify(cart));
-      updateCart();
-    }
-
-    function updateCart() {
-      const cartBox = document.getElementById('cart');
-      if (!cartBox) return;
-      if (cart.length === 0) {
-        cartBox.innerHTML = '<p>No items yet.</p>';
-      } else {
-        cartBox.innerHTML = '<ul>' + cart.map(i => `<li>${i}</li>`).join('') + '</ul>';
-      }
-    }
-
-    updateCart();
   </script>
 
 </body>
-
 </html>
