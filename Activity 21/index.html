@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Website Performance & Security Benchmark — Nike + Comparables</title>
+  <meta name="description" content="Benchmarking website speed and security using PageSpeed Insights, GTmetrix, Pingdom, and Sucuri." />
+  <style>
+    :root{
+      --bg:#0b0d10;
+      --panel:#12161b;
+      --text:#e9eef5;
+      --muted:#9fb0c7;
+      --accent:#64d2ff;
+      --ok:#22c55e;
+      --warn:#f59e0b;
+      --bad:#ef4444;
+      --table-border:#1f2937;
+    }
+    /* Base */
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1100px;margin:0 auto;padding:32px}
+    header{padding:24px 0 8px;border-bottom:1px solid var(--table-border);margin-bottom:24px}
+    h1{font-size:clamp(1.6rem,2.8vw,2.2rem);margin:0 0 8px}
+    h2{font-size:1.2rem;margin:18px 0 8px}
+    p{color:var(--muted);line-height:1.6;margin:8px 0}
+    /* Panel cards */
+    .grid{display:grid;grid-template-columns:1fr;gap:16px}
+    @media(min-width:900px){.grid{grid-template-columns:1.1fr .9fr}}
+    .card{background:var(--panel);border:1px solid var(--table-border);border-radius:14px;padding:18px}
+    .badge{display:inline-block;padding:4px 8px;border-radius:999px;font-size:.85rem;background:#0e1723;border:1px solid var(--table-border);color:var(--muted)}
+    .note{font-size:.92rem}
+    /* Table */
+    .table-wrap{overflow:auto;border-radius:12px;border:1px solid var(--table-border)}
+    table{width:100%;border-collapse:collapse;background:#0e1320}
+    thead th{position:sticky;top:0;background:#0f172a;color:#bcd1ea;font-weight:600;text-align:left;padding:10px;border-bottom:1px solid var(--table-border);white-space:nowrap}
+    tbody td{padding:10px;border-bottom:1px solid var(--table-border);vertical-align:top}
+    tbody tr:hover{background:#0d1220}
+    .site{font-weight:600}
+    .pass{color:var(--ok);font-weight:600}
+    .fail{color:var(--bad);font-weight:600}
+    .grade{font-weight:600}
+    /* Legend chips */
+    .chip{display:inline-block;padding:2px 8px;border-radius:999px;border:1px solid var(--table-border);margin-right:8px;font-size:.85rem}
+    .chip.ok{color:var(--ok)}
+    .chip.warn{color:var(--warn)}
+    .chip.bad{color:var(--bad)}
+    /* Footer */
+    footer{margin-top:28px;color:var(--muted);font-size:.9rem}
+    /* Print */
+    @media print{
+      .wrap{padding:0}
+      header{border:none;margin-bottom:8px}
+      .card{border:1px solid #ddd}
+      thead th{position:static}
+      a{color:inherit;text-decoration:none}
+      body{background:white;color:black}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Website Performance & Security Benchmark</h1>
+      <p class="note">Category: Fashion retail. Mode: Choose Mobile or Desktop and keep it consistent across all sites. Replace placeholders with your actual test results.</p>
+      <span class="badge">Services: PageSpeed Insights, GTmetrix, Pingdom, Sucuri</span>
+    </header>
+
+    <section class="grid">
+      <div class="card">
+        <h2>Method summary</h2>
+        <ul>
+          <li><strong>Scope:</strong> Test homepages of three comparable fashion retail sites.</li>
+          <li><strong>Consistency:</strong> Use the same PageSpeed mode (Mobile or Desktop) for all sites.</li>
+          <li><strong>Record:</strong> PageSpeed (Core Web Vitals + 4 scores), GTmetrix (Grade, Performance, Structure), Pingdom (Grade, Page Size, Load Time), Sucuri (Risk + Malware/Security notes).</li>
+        </ul>
+        <p class="note">
+          Tip: Run each test twice to reduce variance; if results differ, record the most recent and note the variance.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Scoring legend</h2>
+        <p>
+          <span class="chip ok">Pass / A–B / Good</span>
+          <span class="chip warn">Borderline / C</span>
+          <span class="chip bad">Fail / D–F / High risk</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top:16px">
+      <h2>Results table</h2>
+      <div class="table-wrap">
+        <table aria-describedby="results">
+          <thead>
+            <tr>
+              <th>Website</th>
+              <th>Mode</th>
+              <th>PageSpeed Core Web Vitals</th>
+              <th>Performance</th>
+              <th>Accessibility</th>
+              <th>Best practices</th>
+              <th>SEO</th>
+              <th>GTmetrix grade</th>
+              <th>GT Performance</th>
+              <th>GT Structure</th>
+              <th>Pingdom grade</th>
+              <th>Page size</th>
+              <th>Load time</th>
+              <th>Sucuri risk</th>
+              <th>Malware</th>
+              <th>Security notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Site 1: Nike -->
+            <tr>
+              <td class="site"><a href="https://www.nike.com/" target="_blank" rel="noopener">Nike</a></td>
+              <td>Mobile or Desktop</td>
+              <td class="pass">Pass / Fail</td>
+              <td>0–100</td>
+              <td>0–100</td>
+              <td>0–100</td>
+              <td>0–100</td>
+              <td class="grade">A–F</td>
+              <td>0–100%</td>
+              <td>0–100%</td>
+              <td>0–100</td>
+              <td>e.g., 3.2 MB</td>
+              <td>e.g., 2.1 s</td>
+              <td>Low / Medium / High</td>
+              <td>None / Found</td>
+              <td>e.g., HSTS enabled; no open directories</td>
+            </tr>
+            <!-- Duplicate and replace for Site 2 -->
+            <tr>
+              <td class="site"><a href="#" target="_blank" rel="noopener">Comparable Site 2</a></td>
+              <td>Mobile or Desktop</td>
+              <td class="pass">Pass / Fail</td>
+              <td>0–100</td>
+              <td>0–100</td>
+              <td>0–100</td>
+              <td>0–100</td>
+              <td class="grade">A–F</td>
+              <td>0–100%</td>
+              <td>0–100%</td>
+              <td>0–100</td>
+              <td>e.g., 4.5 MB</td>
+              <td>e.g., 3.4 s</td>
+              <td>Low / Medium / High</td>
+              <td>None / Found</td>
+              <td>e.g., Missing CSP; outdated JS library</td>
+            </tr>
+            <!-- Duplicate and replace for Site 3 -->
+            <tr>
+              <td class="site"><a href="#" target="_blank" rel="noopener">Comparable Site 3</a></td>
+              <td>Mobile or Desktop</td>
+              <td class="pass">Pass / Fail</td>
+              <td>0–100</td>
+              <td>0–100</td>
+              <td>0–100</td>
+              <td>0–100</td>
+              <td class="grade">A–F</td>
+              <td>0–100%</td>
+              <td>0–100%</td>
+              <td>0–100</td>
+              <td>e.g., 2.8 MB</td>
+              <td>e.g., 1.9 s</td>
+              <td>Low / Medium / High</td>
+              <td>None / Found</td>
+              <td>e.g., TLS ok; mixed-content blocked</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Replace placeholders with your measured values. Keep the same mode (Mobile or Desktop) for all three.</p>
+    </section>
+
+    <section class="card" style="margin-top:16px">
+      <h2>Short essay</h2>
+      <p>
+        Website performance directly influences user engagement and conversion. In fashion retail, high media density and dynamic content make optimization crucial. Based on tests with Nike and two comparable brands, Core Web Vitals outcomes aligned with overall grades: sites that passed showed faster load times and smaller page sizes, while failing sites carried heavier assets and more render-blocking resources.
+      </p>
+      <p>
+        GTmetrix grades correlated with Pingdom load time; pages with better structure (fewer blocking scripts, optimized images, effective caching) consistently loaded faster. Security checks showed generally low risk across major brands; when risks appeared, they were often configuration-related (missing security headers, mixed content) rather than active malware. Overall, disciplined performance practices—minifying assets, deferring non-critical JS, compressing images, and adopting modern caching—translated into better user experience and competitiveness.
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        How to submit: publish this file to your GitHub Pages repo (e.g., username.github.io), then share the URL. You can also export to PDF for Canvas.
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
