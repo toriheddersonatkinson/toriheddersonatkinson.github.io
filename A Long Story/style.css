@@ -1,0 +1,50 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  background: #000;
+  overflow-x: hidden;
+}
+
+/* Each step is full screen */
+.step {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.step img {
+  max-width: 80%;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+/* Backgrounds */
+.intro {
+  background: url('https://picsum.photos/id/1003/1600/900') no-repeat center center/cover;
+}
+
+.outro {
+  background: url('https://picsum.photos/id/1005/1600/900') no-repeat center center/cover;
+}
+
+h1, h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 1.2rem;
+  max-width: 800px;
+}
