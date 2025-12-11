@@ -2,134 +2,144 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Scandinavian Long Story</title>
-  <link rel="stylesheet" href="styles.css" />
-
-  <!-- Animate.css -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  <!-- Wow.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-  <script>
-    new WOW().init();
-  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Website Performance & Security Benchmark — Nike + Comparables</title>
+  <meta name="description" content="Benchmarking website speed and security using PageSpeed Insights, GTmetrix, Pingdom, and Sucuri." />
+  <style>
+    /* existing styles unchanged */
+    :root{
+      --bg:#0b0d10;
+      --panel:#12161b;
+      --text:#e9eef5;
+      --muted:#9fb0c7;
+      --accent:#64d2ff;
+      --ok:#22c55e;
+      --warn:#f59e0b;
+      --bad:#ef4444;
+      --table-border:#1f2937;
+    }
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;}
+    .wrap{max-width:1100px;margin:0 auto;padding:32px}
+    header{padding:24px 0 8px;border-bottom:1px solid var(--table-border);margin-bottom:24px}
+    h1{font-size:clamp(1.6rem,2.8vw,2.2rem);margin:0 0 8px}
+    h2{font-size:1.2rem;margin:18px 0 8px}
+    p{color:var(--muted);line-height:1.6;margin:8px 0}
+    .card{background:var(--panel);border:1px solid var(--table-border);border-radius:14px;padding:18px;margin-top:16px}
+    .table-wrap{overflow:auto;border-radius:12px;border:1px solid var(--table-border)}
+    table{width:100%;border-collapse:collapse;background:#0e1320}
+    thead th{background:#0f172a;color:#bcd1ea;font-weight:600;text-align:left;padding:10px;border-bottom:1px solid var(--table-border)}
+    tbody td{padding:10px;border-bottom:1px solid var(--table-border)}
+    tbody tr:hover{background:#0d1220}
+    canvas{background:#0e1320;border-radius:12px;padding:10px;margin-top:20px}
+  </style>
 </head>
 <body>
-  <!-- Story Steps -->
-  <section class="step intro wow animate__animated animate__fadeIn">
-    <h1>Legends of the North</h1>
-    <p>A Scandinavian tale of courage, nature, and myth.</p>
-  </section>
+  <div class="wrap">
+    <header>
+      <h1>Website Performance & Security Benchmark</h1>
+      <p class="note">Category: Fashion retail. Mode: Choose Mobile or Desktop and keep it consistent across all sites.</p>
+    </header>
 
-  <section class="step wow animate__animated animate__fadeInUp">
-    <h2>Step 1: The Fjords</h2>
-    <p>In Norway’s deep fjords, the story begins — where mountains meet the sea in silence.</p>
-    <img src="https://picsum.photos/id/1018/1200/800" alt="Norwegian Fjord" />
-  </section>
+    <!-- Results Table -->
+    <section class="card">
+      <h2>Results table</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Website</th>
+              <th>Performance</th>
+              <th>Accessibility</th>
+              <th>Best practices</th>
+              <th>SEO</th>
+              <th>Pingdom grade</th>
+              <th>Load time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Nike</td>
+              <td>85</td>
+              <td>92</td>
+              <td>90</td>
+              <td>95</td>
+              <td>82</td>
+              <td>2.1s</td>
+            </tr>
+            <tr>
+              <td>Adidas</td>
+              <td>72</td>
+              <td>88</td>
+              <td>85</td>
+              <td>90</td>
+              <td>75</td>
+              <td>3.4s</td>
+            </tr>
+            <tr>
+              <td>Under Armour</td>
+              <td>89</td>
+              <td>95</td>
+              <td>92</td>
+              <td>97</td>
+              <td>88</td>
+              <td>1.9s</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-  <section class="step wow animate__animated animate__fadeInUp">
-    <h2>Step 2: The Northern Lights</h2>
-    <p>Across Lapland’s skies, the Aurora Borealis dances — a sign of the gods watching over.</p>
-    <img src="https://picsum.photos/id/1022/1200/800" alt="Aurora Borealis" />
-  </section>
+      <!-- Results Chart -->
+      <h2>Results chart</h2>
+      <canvas id="resultsChart" width="400" height="200"></canvas>
+    </section>
 
-  <section class="step wow animate__animated animate__fadeInUp">
-    <h2>Step 3: The Viking Spirit</h2>
-    <p>From Denmark’s shores, Viking ships once sailed — carrying tales of bravery and discovery.</p>
-    <img src="https://picsum.photos/id/1031/1200/800" alt="Viking Ship" />
-  </section>
+    <footer>
+      <p>Publish this file to GitHub Pages and share the URL.</p>
+    </footer>
+  </div>
 
-  <section class="step wow animate__animated animate__fadeInUp">
-    <h2>Step 4: The Forests</h2>
-    <p>Sweden’s endless forests whisper old sagas — of trolls, elves, and hidden kingdoms.</p>
-    <img src="https://picsum.photos/id/1040/1200/800" alt="Scandinavian Forest" />
-  </section>
-
-  <section class="step outro wow animate__animated animate__fadeIn">
-    <h2>The End</h2>
-    <p>Scandinavia’s legends remind us: nature and myth are forever intertwined in the North.</p>
-  </section>
-
-  <!-- Results Template Section -->
-  <section class="step results wow animate__animated animate__fadeInUp">
-    <h2>Website Performance & Security Results</h2>
-    <p>Benchmarking three Scandinavian-inspired websites using PageSpeed Insights, GTmetrix, Pingdom, and Sucuri.</p>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>Website</th>
-            <th>PageSpeed Core Web Vitals</th>
-            <th>Performance</th>
-            <th>Accessibility</th>
-            <th>Best Practices</th>
-            <th>SEO</th>
-            <th>GTmetrix Grade</th>
-            <th>GT Performance</th>
-            <th>GT Structure</th>
-            <th>Pingdom Grade</th>
-            <th>Page Size</th>
-            <th>Load Time</th>
-            <th>Sucuri Risk</th>
-            <th>Malware</th>
-            <th>Security Notes</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Nike</td>
-            <td>Pass</td>
-            <td>85</td>
-            <td>92</td>
-            <td>90</td>
-            <td>95</td>
-            <td>B</td>
-            <td>80%</td>
-            <td>85%</td>
-            <td>82</td>
-            <td>3.2 MB</td>
-            <td>2.1s</td>
-            <td>Low</td>
-            <td>None</td>
-            <td>HSTS enabled</td>
-          </tr>
-          <tr>
-            <td>Adidas</td>
-            <td>Fail</td>
-            <td>72</td>
-            <td>88</td>
-            <td>85</td>
-            <td>90</td>
-            <td>C</td>
-            <td>70%</td>
-            <td>78%</td>
-            <td>75</td>
-            <td>4.5 MB</td>
-            <td>3.4s</td>
-            <td>Medium</td>
-            <td>None</td>
-            <td>Missing CSP</td>
-          </tr>
-          <tr>
-            <td>Under Armour</td>
-            <td>Pass</td>
-            <td>89</td>
-            <td>95</td>
-            <td>92</td>
-            <td>97</td>
-            <td>A</td>
-            <td>90%</td>
-            <td>92%</td>
-            <td>88</td>
-            <td>2.8 MB</td>
-            <td>1.9s</td>
-            <td>Low</td>
-            <td>None</td>
-            <td>TLS ok</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('resultsChart').getContext('2d');
+    const resultsChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Nike', 'Adidas', 'Under Armour'],
+        datasets: [
+          {
+            label: 'Performance',
+            data: [85, 72, 89],
+            backgroundColor: '#64d2ff'
+          },
+          {
+            label: 'Accessibility',
+            data: [92, 88, 95],
+            backgroundColor: '#22c55e'
+          },
+          {
+            label: 'Best Practices',
+            data: [90, 85, 92],
+            backgroundColor: '#f59e0b'
+          },
+          {
+            label: 'SEO',
+            data: [95, 90, 97],
+            backgroundColor: '#ef4444'
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { labels: { color: '#e9eef5' } }
+        },
+        scales: {
+          x: { ticks: { color: '#e9eef5' } },
+          y: { ticks: { color: '#e9eef5' }, beginAtZero: true, max: 100 }
+        }
+      }
+    });
+  </script>
 </body>
 </html>
